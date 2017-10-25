@@ -7,7 +7,7 @@ import time
 import csv
 Teams=['ATL','BOS','BKN','CHA','CHI','CLE','DAL','DEL','DET','GSW','HOU','IND','LAC','LAL','MEM','MIA','MIL','MIN','NOP','NYK','OKC','ORL','PHI','PHX','POR','SAC','SAS','TOR','UTA','WAS']
 driver= webdriver.Firefox()
-driver.get('http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17')
+driver.get('http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y')
 time.sleep(30)
 for teamIndex in range(3,33):
     filtersTab=driver.find_element_by_xpath('/html/body/div[3]/div[2]/section/div/div[2]/div/div[2]/button')
@@ -21,9 +21,15 @@ for teamIndex in range(3,33):
     selectTeam.click()
     runBtn=driver.find_element_by_xpath('/html/body/div[3]/div[2]/section/div/div[2]/div/div[2]/stats-run-it/button')
     runBtn.click()
-    time.sleep(10)
-    LoadMoreBtn=driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div[4]/nba-stat-table/div[2]/div/a')
-    LoadMoreBtn.click()
+    time.sleep(20)
+    totalGames = driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div[4]/nba-stat-table[1]/div[1]/div[1]/table/tbody/tr/td[2]')
+    print(totalGames.text)
+    numberClicks=int(int(totalGames.text)/50)
+    if int(totalGames.text)%50==0:
+        numberClicks=numberClicks-1
+    for i in range(0,numberClicks):
+        LoadMoreBtn = driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div[4]/nba-stat-table/div[2]/div/a')
+        LoadMoreBtn.click()
     #/html/body/div[3]/div[2]/section/div/div[3]/div/div/form/div/section[2]/div/div[2]/ul/li[3]
     #/html/body/div[3]/div[2]/section/div/div[3]/div/div/form/div/section[2]/div/div[2]/ul/li[4]
     time.sleep(10)
@@ -33,7 +39,8 @@ for teamIndex in range(3,33):
     writer = csv.writer(csv_file)
     ColumnTitle=['TEAM', 'DATE', 'MATCHUP', 'W/L', 'MIN', 'PTS', 'FGM', 'FGA', 'FG%', '3PM', '3PA', '3P%', 'FTM', 'FTA', 'FT%', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', '+/-']
     writer.writerow(['TEAM', 'DATE', 'MATCHUP', 'W/L', 'MIN', 'PTS', 'FGM', 'FGA', 'FG%', '3PM', '3PA', '3P%', 'FTM', 'FTA', 'FT%', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', '+/-'])
-    for i in range(1,50):
+
+    for i in range(1,int(totalGames.text)):
         teams_dict = collections.OrderedDict()
         for j in range(1,NoOfColumn):
             data=driver.find_element_by_xpath('/html/body/div[3]/div/div/div[4]/nba-stat-table/div[1]/div[1]/table/tbody/tr['+str(i)+']/td['+str(j)+']')

@@ -1727,3 +1727,600 @@ Line: 1689, column: 0
 1508865320849	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
 1508865321033	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&TeamID=1610612759"
 1508865321278	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956286957	geckodriver	INFO	geckodriver 0.19.0
+1508956286964	geckodriver	INFO	Listening on 127.0.0.1:60343
+1508956288766	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.0AUzorOUrwGd"
+1508956290167	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508956292483	Marionette	INFO	Enabled via --marionette
+1508956300053	Marionette	INFO	Listening on port 38116
+1508956300131	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508956300477	Marionette	DEBUG	Register listener.js for window 2147483649
+1508956300682	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508956300905	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508956300905	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1508956304465	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508956319297	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483657"
+1508956323038	Marionette	DEBUG	Received DOM event "pageshow" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508956354029	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956354637	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956355235	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956355634	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612737"
+1508956358733	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956367740	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956415460	geckodriver	INFO	geckodriver 0.19.0
+1508956415479	geckodriver	INFO	Listening on 127.0.0.1:44866
+1508956418551	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.mxiPu8ETkRmY"
+1508956421418	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508956427806	Marionette	INFO	Enabled via --marionette
+1508956450025	Marionette	INFO	Listening on port 43671
+1508956450195	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508956450672	Marionette	DEBUG	Register listener.js for window 2147483649
+1508956451113	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508956451635	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508956451635	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1508956459768	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508956477743	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483656"
+1508956484091	Marionette	DEBUG	Received DOM event "pageshow" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508956515146	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956515726	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956516320	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956516733	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612737"
+1508956519981	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956529036	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+[Child 18038] WARNING: pipe error (15): Connection reset by peer: file /build/firefox-l1g98U/firefox-56.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1508956583704	geckodriver	INFO	geckodriver 0.19.0
+1508956583719	geckodriver	INFO	Listening on 127.0.0.1:53047
+1508956585232	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.rSASqqNdORXs"
+1508956586409	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508956587808	Marionette	INFO	Enabled via --marionette
+1508956597151	Marionette	INFO	Listening on port 32815
+1508956597260	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508956597588	Marionette	DEBUG	Register listener.js for window 2147483649
+1508956597866	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508956597971	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508956597971	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1508956601653	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+JavaScript error: https://i.cdn.turner.com/ads/adfuel/ais/nba2-ais.js, line 277: TypeError: window.googletag.pubads is not a function
+1508956618189	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483662"
+1508956621053	Marionette	DEBUG	Received DOM event "pageshow" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508956652071	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956652715	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956653344	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956653937	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612737"
+1508956657197	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956666108	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956887029	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956887654	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956888231	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956888667	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956889109	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612738"
+1508956889393	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508956901381	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508957142701	geckodriver	INFO	geckodriver 0.19.0
+1508957142737	geckodriver	INFO	Listening on 127.0.0.1:49088
+1508957144157	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Ha6ep6xoCoDR"
+1508957145033	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508957146091	Marionette	INFO	Enabled via --marionette
+1508957153813	Marionette	INFO	Listening on port 36225
+1508957153882	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508957154073	Marionette	DEBUG	Register listener.js for window 2147483649
+1508957154165	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508957154257	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508957154257	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1508957156649	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508957165599	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483656"
+1508957173261	Marionette	DEBUG	Received DOM event "pageshow" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508957204070	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508957204583	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508957205082	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508957205388	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612737"
+1508957207676	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508957227053	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508957395989	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508957396732	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508957397340	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508957397847	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508957398414	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612738"
+1508957401920	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508957421705	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508958034079	geckodriver	INFO	geckodriver 0.19.0
+1508958034096	geckodriver	INFO	Listening on 127.0.0.1:38890
+1508958035588	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.7WvlNr1ykaUw"
+1508958036590	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508958038030	Marionette	INFO	Enabled via --marionette
+1508958046123	Marionette	INFO	Listening on port 43189
+1508958046172	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508958046312	Marionette	DEBUG	Register listener.js for window 2147483649
+1508958046471	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508958046670	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508958046673	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1508958050163	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508958057402	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483659"
+1508958061042	Marionette	DEBUG	Received DOM event "pageshow" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508958094738	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508958161167	geckodriver	INFO	geckodriver 0.19.0
+1508958161184	geckodriver	INFO	Listening on 127.0.0.1:40669
+1508958162921	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.9sWYbJE8Ly4L"
+1508958164061	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508958166454	Marionette	INFO	Enabled via --marionette
+1508958182375	Marionette	INFO	Listening on port 32915
+1508958182565	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508958183028	Marionette	DEBUG	Register listener.js for window 2147483649
+1508958183378	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508958183618	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508958183621	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1508958189415	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508958211352	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483658"
+1508958221061	Marionette	DEBUG	Received DOM event "pageshow" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508958252194	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508958261889	geckodriver	INFO	geckodriver 0.19.0
+1508958261893	geckodriver	INFO	Listening on 127.0.0.1:50688
+1508958263029	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.7z9GfePC2j7C"
+1508958263363	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508958263722	Marionette	INFO	Enabled via --marionette
+1508958267050	Marionette	INFO	Listening on port 37518
+1508958267190	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508958267509	Marionette	DEBUG	Register listener.js for window 2147483649
+1508958267630	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508958267757	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508958267772	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1508958270461	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508958282926	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483658"
+1508958287138	Marionette	DEBUG	Received DOM event "pageshow" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508958318345	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508958319231	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508958319894	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508958407151	geckodriver	INFO	geckodriver 0.19.0
+1508958407154	geckodriver	INFO	Listening on 127.0.0.1:58173
+1508958408253	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.yUaZkOSDl0Nt"
+1508958408569	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508958408914	Marionette	INFO	Enabled via --marionette
+1508958413198	Marionette	INFO	Listening on port 41837
+1508958413373	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508958413507	Marionette	DEBUG	Register listener.js for window 2147483649
+1508958413595	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508958413721	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508958413724	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1508958417492	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+JavaScript error: https://i.cdn.turner.com/ads/adfuel/ais/nba2-ais.js, line 277: TypeError: window.googletag.pubads is not a function
+1508958428860	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483663"
+1508958438743	Marionette	DEBUG	Received DOM event "pageshow" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508958602008	geckodriver	INFO	geckodriver 0.19.0
+1508958602013	geckodriver	INFO	Listening on 127.0.0.1:47457
+1508958603151	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.nOsLJ8iqOzaF"
+1508958603563	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508958604026	Marionette	INFO	Enabled via --marionette
+1508958607799	Marionette	INFO	Listening on port 44373
+1508958607906	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508958608242	Marionette	DEBUG	Register listener.js for window 2147483649
+1508958608416	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508958608631	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508958608635	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1508958611123	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+JavaScript error: https://i.cdn.turner.com/ads/adfuel/ais/nba2-ais.js, line 277: TypeError: window.googletag.pubads is not a function
+JavaScript error: http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y, line 4: TypeError: googletag.pubads is not a function
+1508958627307	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483663"
+1508958629497	Marionette	DEBUG	Received DOM event "pageshow" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508958659938	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508958660395	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508958660820	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508958660951	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612751"
+1508958661182	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508958681758	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960208612	geckodriver	INFO	geckodriver 0.19.0
+1508960208628	geckodriver	INFO	Listening on 127.0.0.1:33603
+1508960209771	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Li0ty4DTEFw5"
+1508960210477	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508960211029	Marionette	INFO	Enabled via --marionette
+1508960216258	Marionette	INFO	Listening on port 46280
+1508960216400	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508960216559	Marionette	DEBUG	Register listener.js for window 2147483649
+1508960216704	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508960216882	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508960216882	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1508960219716	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+JavaScript error: https://i.cdn.turner.com/ads/adfuel/ais/nba2-ais.js, line 277: TypeError: window.googletag.pubads is not a function
+1508960224974	Marionette	DEBUG	Received DOM event "pageshow" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508960255710	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960256215	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960256717	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960256926	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612737"
+1508960257215	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960277719	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960317383	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960317812	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960318185	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960318438	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960318595	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612738"
+1508960318826	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960339507	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960339909	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960384009	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960384439	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960384783	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960385073	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960385176	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612751"
+1508960386673	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960405960	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960445983	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960446415	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960446763	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960447030	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960447138	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612766"
+1508960447387	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960467993	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960511905	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960512377	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960512730	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960513035	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960513238	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612741"
+1508960513468	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960534094	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960577931	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960578383	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960578693	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960578947	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960579081	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612739"
+1508960579332	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960599997	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960600444	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960650658	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960651040	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960651395	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960651685	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960651783	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612742"
+1508960652001	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960672632	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960716167	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960716603	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960716930	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960717184	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960717301	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612743"
+1508960717511	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960738112	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960791132	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960791680	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960792037	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960792330	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960792452	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612765"
+1508960792670	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960813504	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960870766	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960871222	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960871551	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960871811	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960871913	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612744"
+1508960872148	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960893254	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960893682	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960948750	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960949191	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960949549	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960949829	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960949921	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612745"
+1508960950132	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508960971087	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961134350	geckodriver	INFO	geckodriver 0.19.0
+1508961134386	geckodriver	INFO	Listening on 127.0.0.1:35681
+1508961135508	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.dF74F6r0h8gX"
+1508961135868	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508961136351	Marionette	INFO	Enabled via --marionette
+1508961139866	Marionette	INFO	Listening on port 38297
+1508961139971	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508961140266	Marionette	DEBUG	Register listener.js for window 2147483649
+1508961140359	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508961140535	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508961140535	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1508961142848	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+JavaScript error: https://i.cdn.turner.com/ads/adfuel/ais/nba2-ais.js, line 277: TypeError: window.googletag.pubads is not a function
+1508961151872	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483663"
+1508961153289	Marionette	DEBUG	Received DOM event "pageshow" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508961183714	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961184027	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961184336	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961184422	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612737"
+1508961184648	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961204940	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961242665	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961242959	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961243251	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961243516	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961243604	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612738"
+1508961243813	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961264355	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961264879	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961312483	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961312897	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961313258	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961313586	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961313676	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612751"
+1508961313888	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961334541	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961367784	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961368170	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961368487	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961368777	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961368897	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612766"
+1508961370545	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961389689	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961423326	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961423707	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961424061	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961424333	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961424437	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612741"
+1508961424659	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961445847	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961486651	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961486995	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961487245	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961487480	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961487570	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612739"
+1508961487792	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961508392	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961508750	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961554796	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961555030	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961555275	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961555542	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961555635	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612742"
+1508961555868	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961576457	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961616223	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961616636	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961616967	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961617248	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961617332	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612743"
+1508961617548	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961638133	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961681047	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961681443	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961681768	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961682017	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961682107	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612765"
+1508961682325	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961703095	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961740041	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961740422	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961740777	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961741023	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961741134	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612744"
+1508961741348	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961762045	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961762482	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961805578	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961805991	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961806350	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961806593	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961806694	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612745"
+1508961806909	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508961827649	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508963865037	geckodriver	INFO	geckodriver 0.19.0
+1508963865040	geckodriver	INFO	Listening on 127.0.0.1:38538
+1508963866123	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.X661OIDyVEu6"
+1508963866381	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508963866688	Marionette	INFO	Enabled via --marionette
+1508963870671	Marionette	INFO	Listening on port 38283
+1508963870742	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508963870902	Marionette	DEBUG	Register listener.js for window 2147483649
+1508963870973	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508963871094	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508963871095	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1508963873498	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508963878857	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483656"
+1508963891733	Marionette	DEBUG	Received DOM event "pageshow" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y"
+1508963922129	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508963922458	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508963922811	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508963922888	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612737"
+1508963923131	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508963943640	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508963982058	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508963982472	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508963982830	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508963983111	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508963983231	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612738"
+1508963983447	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964004010	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964004430	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964050145	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964050607	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964050953	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964051236	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964051366	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612751"
+1508964051575	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964072199	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964111083	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964111543	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964111879	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964112132	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964112239	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612766"
+1508964112450	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964132840	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964177273	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964177712	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964178057	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964178349	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964178464	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612741"
+1508964178672	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964199133	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964244609	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964245380	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964245780	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964246160	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964246275	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612739"
+1508964246507	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964268541	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964269202	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964336705	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964337008	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964337301	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964337561	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964337707	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612742"
+1508964337933	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964358919	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964410034	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964410322	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964410646	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964410899	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964411045	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612743"
+1508964411257	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964431771	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964486381	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964486807	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964487262	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964487632	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964487749	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612765"
+1508964487966	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964508522	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964564883	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964565134	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964565483	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964565812	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964565939	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612744"
+1508964566161	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964586828	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964587195	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964661911	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964662292	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964662601	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964662864	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964662986	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612745"
+1508964663196	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964684117	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964750515	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964750887	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964751252	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964751522	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964751625	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612754"
+1508964751844	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508964772465	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965596978	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965597334	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965597666	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965597919	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965598033	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612746"
+1508965598245	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965618841	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965681747	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965682048	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965682315	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965682600	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965682695	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612747"
+1508965682909	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965703743	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965771993	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965772420	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965772775	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965773049	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965773179	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612763"
+1508965773400	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965794527	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965853063	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965853506	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965853847	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965854113	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965854226	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612748"
+1508965854447	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965875076	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965931001	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965931392	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965931722	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965931984	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965932117	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612749"
+1508965932328	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508965953286	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966013030	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966013472	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966013786	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966014110	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966014255	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612750"
+1508966014465	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966035154	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966104858	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966105155	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966105487	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966105749	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966105878	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612740"
+1508966106137	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966126478	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966202134	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966202525	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966203003	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966203267	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966203456	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612752"
+1508966203672	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966224367	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966290960	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966291240	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966291573	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966291897	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966292018	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612760"
+1508966292226	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966312931	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966384275	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966384617	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966384891	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966385152	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966385261	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612753"
+1508966385471	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966406091	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966477279	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966477564	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966477841	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966478110	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966478251	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612755"
+1508966478462	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966499315	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966568994	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966569283	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966569600	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966569909	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966570015	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612756"
+1508966570231	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966590697	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966681103	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966681518	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966681929	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966682213	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966682426	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612757"
+1508966682662	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966703386	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966780902	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966781281	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966781632	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966781901	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966782028	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612758"
+1508966782246	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966802810	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966877593	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966877948	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966878258	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966878548	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966878663	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612759"
+1508966878873	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966899705	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966900043	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966990095	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966990382	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966990748	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966991094	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508966991212	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612761"
+1508966991429	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508967012113	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508967097898	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508967098235	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508967098516	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508967098785	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508967098905	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612762"
+1508967099118	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508967119970	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508967209661	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508967210053	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508967210353	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508967210651	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508967210829	Marionette	DEBUG	Received DOM event "popstate" for "http://stats.nba.com/search/team-game/#?CF=PTS*gt*20&sort=GAME_DATE&dir=1&Season=2016-17&GB=Y&TeamID=1610612764"
+1508967211048	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508967231723	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1508967232037	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 3070] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-l1g98U/firefox-56.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
