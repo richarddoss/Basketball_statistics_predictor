@@ -98,10 +98,19 @@ print("From the east conference")
 print(EST[order1[7]],EST[order1[6]],EST[order1[5]],EST[order1[4]],EST[order1[3]],EST[order1[2]],EST[order1[1]],EST[order1[0]])
 print("From the west conference")
 print(WST[order2[7]],WST[order2[6]],WST[order2[5]],WST[order2[4]],WST[order2[3]],WST[order2[2]],WST[order2[1]],WST[order2[0]])
-print("first game",EST[order1[7]],"v/s",EST[order1[0]])
-print("second game",EST[order1[6]],"v/s",EST[order1[1]])
-print("third game",EST[order1[5]],"v/s",EST[order1[2]])
-print("fourth game",EST[order1[4]],"v/s",EST[order1[3]])
+Brackets=EST
+h=4
+while h!=0:
+    for q in range(0,h):
+        print(EST[order1[h*2-1-q]],"v/s",EST[order1[q]])
+        if teams_rating[EST[order1[h*2-1-q]]] < teams_rating[EST[order1[q]]]:
+            Brackets[q]=EST[order1[q]]
+            print(Brackets[q],"won")
+        else:
+            Brackets[q]=EST[order1[h*2-1-q]]
+            print(Brackets[q],"won")
+
+    h=int(h/2)
 
 for i in range(8):
     print(WST[order2[i]],'west')
