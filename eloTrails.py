@@ -23,9 +23,13 @@ def elo(r1,r2,k,s1,s2,Team1,Team2):
     return r1_cap,r2_cap
 
 dataFile=open('screenScraping/RegularSeasonteamstats.csv','r')
+csvFile=open('screenScraping/syntheticDataMatchup.csv','w')
+writer=csv.writer(csvFile)
 reader=csv.reader(dataFile)
+writer.writerow(['Team1','Team2'])
 j=0
 Teams=['ATL','BOS','BKN','CHA','CHI','CLE','DAL','DEL','DEN','DET','EST','FCB','GSW','HOU','IND','LAC','LAL','MAC','MEM','MIA','MIL','MIN','NOP','NYK','OKC','ORL','PHI','PHX','POR','RMD','SAC','SAS','SDS','SLA','TOR','USA','UTA','WAS','WLD','WST']
+prior=[1000,1010,1020,1030,1040,1050,'D,'DEL','DEN','DET','EST','FCB','GSW','HOU','IND','LAC','LAL','MAC','MEM','MIA','MIL','MIN','NOP','NYK','OKC','ORL','PHI','PHX','POR','RMD','SAC','SAS','SDS','SLA','TOR','USA','UTA','WAS','WLD','WST']
 teams_rating = collections.OrderedDict()
 accuracy=0
 k=0
@@ -61,6 +65,8 @@ for row in reader:
             s2=1
         if (s1==1 and teams_rating[Team1]>teams_rating[Team2]) or(s2==1 and teams_rating[Team2]>teams_rating[Team1]):
             accuracy+=1
+            r=[Team1,Team2]
+            writer.writerow(r)
         if add in check:
             check.remove(add)
             k=k-1
@@ -75,6 +81,7 @@ for row in reader:
             print(Team1,"rating",teams_rating[Team1],Team2,"rating",teams_rating[Team2])
     j=j+1
 print(accuracy)
+csvFile.close()
 for i in range(0,40):
     print(Teams[i],teams_rating[Teams[i]])
 EST=['ATL','BOS','BKN','CHA','CHI','CLE','DET','IND','MIA','MIL','NYK','ORL','PHI','TOR','WST']
@@ -98,23 +105,80 @@ print("From the east conference")
 print(EST[order1[7]],EST[order1[6]],EST[order1[5]],EST[order1[4]],EST[order1[3]],EST[order1[2]],EST[order1[1]],EST[order1[0]])
 print("From the west conference")
 print(WST[order2[7]],WST[order2[6]],WST[order2[5]],WST[order2[4]],WST[order2[3]],WST[order2[2]],WST[order2[1]],WST[order2[0]])
-Brackets=EST
+Brackets=["1","2","3","4","5","6","7","8"]
+Brackets2=["1","2","3","4","5","6","7","8"]
+FinalsBracket=["" for x in range(31)]
+f=-1
+for indx in range(8):
+    Brackets[indx]=EST[order1[7-indx]]
 h=4
 while h!=0:
     for q in range(0,h):
-        print(EST[order1[h*2-1-q]],"v/s",EST[order1[q]])
-        if teams_rating[EST[order1[h*2-1-q]]] < teams_rating[EST[order1[q]]]:
-            Brackets[q]=EST[order1[q]]
+        print(Brackets[h*2-1-q],"v/s",Brackets[q])
+        if teams_rating[Brackets[h*2-1-q]] < teams_rating[Brackets[q]]:
+            Brackets[q]=Brackets[q]
             print(Brackets[q],"won")
+            f = f + 1
+            FinalsBracket[f]=Brackets[2*h-1-q]
+            f=f+1
+            FinalsBracket[f]=Brackets[q]
         else:
-            Brackets[q]=EST[order1[h*2-1-q]]
+            Brackets[q]=Brackets[h*2-1-q]
             print(Brackets[q],"won")
+            f = f + 1
+            FinalsBracket[f] = Brackets[2 * h - 1 - q]
+            f = f + 1
+            FinalsBracket[f] = Brackets[q]
 
     h=int(h/2)
+print("finals season in western confernece")
+#For western conferences
+for indx in range(8):
+    Brackets2[indx]=WST[order2[7-indx]]
+h=4
+while h!=0:
+    for q in range(0,h):
+        print(Brackets2[h*2-1-q],"v/s",Brackets2[q])
+        if teams_rating[Brackets2[h*2-1-q]] < teams_rating[Brackets2[q]]:
+            Brackets2[q]=Brackets2[q]
+            print(Brackets2[q],"won")
+            f = f + 1
+            FinalsBracket[f] = Brackets2[2 * h - 1 - q]
+            f = f + 1
+            FinalsBracket[f] = Brackets2[q]
+        else:
+            Brackets2[q]=Brackets2[h*2-1-q]
+            print(Brackets2[q],"won")
+            f = f + 1
+            FinalsBracket[f] = Brackets2[2 * h - 1 - q]
+            f = f + 1
+            FinalsBracket[f] = Brackets2[q]
+    h = int(h / 2)
+"FInals!!!"
+print(teams_rating[Brackets[0]],teams_rating[Brackets2[0]])
+if teams_rating[Brackets[0]]>teams_rating[Brackets2[0]]:
+    f = f + 1
+    FinalsBracket[f] = Brackets[0]
+    f = f + 1
+    FinalsBracket[f] = Brackets2[0]
+    f=f+1
+    FinalsBracket[f] = Brackets[0]
+else:
+    f = f + 1
+    FinalsBracket[f] = Brackets[0]
+    f = f + 1
+    FinalsBracket[f] = Brackets2[0]
+    f = f + 1
+    FinalsBracket[f] = Brackets2[0]
+print(FinalsBracket)
 
+
+
+'''
 for i in range(8):
     print(WST[order2[i]],'west')
 print("first game",WST[order2[7]],"v/s",WST[order2[0]])
 print("second game",WST[order2[6]],"v/s",WST[order2[1]])
 print("third game",WST[order2[5]],"v/s",WST[order2[2]])
 print("fourth game",WST[order2[4]],"v/s",WST[order2[3]])
+'''
