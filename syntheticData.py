@@ -23,7 +23,7 @@ def elo(r1,r2,k,s1,s2,Team1,Team2):
     return r1_cap,r2_cap
 
 dataFile=open('screenScraping/syntheticDataMatchup.csv','r')
-csvFile=open('screenScraping/syntheticData1','w')
+csvFile=open('screenScraping/syntheticData1.csv','w')
 writer=csv.writer(csvFile)
 reader=csv.reader(dataFile)
 writer.writerow(['Team1','Team2','Results'])
