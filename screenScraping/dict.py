@@ -22,9 +22,11 @@ for i in range(0,30):
 	for team in player_rating[Teams[i]]:
 		player_rating[Teams[i]][team]=(1000/(LenTeams[Teams[i]]))
 		print(team,player_rating[Teams[i]][team])
+		
 # Intializiation of rating is done
 j=0
-K=1
+K=0.05
+time.sleep(10)
 for row in reader:
 	if j!=0:
 		#print("hi")
@@ -51,9 +53,24 @@ for row in reader:
 		for team in player_rating[oppTeam]:
 			OppTeamRating+=player_rating[oppTeam][team]
 		expectedScore=OppTeamRating-((LenTeams[oppTeam]-1)/LenTeams[oppTeam])*TeamRating
-		player_rating[row[1]][player]=player_rating[row[1]][player]+K*int(row[24])*abs(actualScore-expectedScore)
-		print(row[1],player,player_rating[row[1]][player])
-		time.sleep(3)
+		X=actualScore-expectedScore
+		print(OppTeamRating,"OppTeamRating",oppTeam)
+		print(TeamRating,"TeamRating",row[1])
+		if TeamRating>OppTeamRating:
+			print("Expected win",row[1])
+		else:
+			print("expected win",oppTeam)
+		if row[4]=="W":
+			print("actual win",row[1])
+		else:
+			print("actual win",oppTeam)
+		#print(row[4])
+		print("player name",row[0])
+		print(actualScore,"actual")
+		print(expectedScore,"expected")
+		player_rating[row[1]][row[0]]=player_rating[row[1]][row[0]]+K*int(row[24])*abs(X)
+		#print(row[1],player,player_rating[row[1]][player])
+		time.sleep(10)
 	else:
 		j=1
 #rating update
