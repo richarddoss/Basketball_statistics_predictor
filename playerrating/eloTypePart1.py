@@ -3,26 +3,31 @@ import collections
 import time
 import re
 import csv
+def logistic(x):
+	y=1/(1+pow(10,-(x)))
+	return(y)
 def elo(fixedPlayer,playerRating,minutesPlayed,Team,OppTeam,TotTime,PTS):
 	m1=0
 	m2=0
+	print("Pre-Update player Rating for {} is".format(fixedPlayer),playerRating[Team][fixedPlayer],"TEAM:{}".format(Team))
 	for players in playerRating[Team]:
 		m1+=playerRating[Team][players]*minutesPlayed[Team][players]
 	for players in playerRating[OppTeam]:
 		m2+=playerRating[OppTeam][players]*minutesPlayed[OppTeam][players]
-	m1without=m1-playerRating[Team][fixedPlayer]*minutesPlayed[Team][fixedPlayer]
+	new=TotTime-minutesPlayed[Team][fixedPlayer]
+	m1without=((m1-playerRating[Team][fixedPlayer]*minutesPlayed[Team][fixedPlayer])*Totime)/new
 	#print("effective strength for {} player's team".format(fixedPlayer),m1without,"Effective strength for opp team",m2)
-	minWithoutPlayer=minutesPlayed[Team][fixedPlayer]*int(TotTime)
+	minPlayedByPlayer=minutesPlayed[Team][fixedPlayer]*int(TotTime)
 	minWithPlayer=int(TotTime)-minWithoutPlayer
-	PtTeam=minWithoutPlayer*m1without+minWithPlayer*m1
-	PtOppTeam=int(TotTime)*m2
+	PtTeam=minPlayedByPlayer*playerRating[Team][fixedPlayer]+4*minPlayedByPlayer*m1without
+	PtOppTeam=minPlayedByPlayer*5*m2
 	#print("PointProduction by {}".format(Team),PtTeam)
 	#print("PointProduction by {}".format(OppTeam),PtOppTeam)
 	expectedValue=PtTeam-PtOppTeam
 	#print("Actual",PTS,"Expected",expectedValue)
 	updateValue=(10*(PTS-expectedValue))/int(TotTime)
 	playerRating[Team][fixedPlayer]=playerRating[Team][fixedPlayer]+updateValue
-	#print("Updated player Rating for {} is".format(fixedPlayer),playerRating[Team][fixedPlayer])
+	print("Updated player Rating for {} is".format(fixedPlayer),playerRating[Team][fixedPlayer],"TEAM:{}".format(Team))
 	#time.sleep(10)
 	return playerRating
 	
