@@ -4,13 +4,14 @@ import time
 import re
 import csv
 def logistic(x):
-	y=1/(1+pow(10,-(x)))
+	y=1/(1+pow(10,-(x)/100))
 	return(y)
 def elo(playerRating,minutesPlayed,Team1,Team2,TotTime,plusminus):
 	m1=0
 	m2=0
 	NumOfPlayer=0
 	Sum=0
+	K=1
 	Offset=defaultdict(dict)
 	#print("Pre-Update player Rating for {} is".format(fixedPlayer),playerRating[Team][fixedPlayer],"TEAM:{}".format(Team))
 	for players in playerRating[Team1]:
@@ -21,15 +22,14 @@ def elo(playerRating,minutesPlayed,Team1,Team2,TotTime,plusminus):
 		new=TotTime-minutesPlayed[Team1][fixedPlayer]
 		m1without=((m1-playerRating[Team1][fixedPlayer]*minutesPlayed[Team1][fixedPlayer])*TotTime)/new
 		#print("effective strength for {} player's team".format(fixedPlayer),m1without,"Effective strength for opp team",m2)
-		minPlayedByPlayer=minutesPlayed[Team1][fixedPlayer]*int(TotTime)
+		minPlayedByPlayer=minutesPlayed[Team1][fixedPlayer]#*int(TotTime)
 		#minWithPlayer=int(TotTime)-minWithoutPlayer
 		PtTeam=minPlayedByPlayer*playerRating[Team1][fixedPlayer]+4*minPlayedByPlayer*m1without
 		PtOppTeam=minPlayedByPlayer*5*m2
-		#print("PointProduction by {}".format(Team),PtTeam)
-		#print("PointProduction by {}".format(OppTeam),PtOppTeam)
-		expectedValue=PtTeam-PtOppTeam
+		X=round(PtTeam-PtOppTeam)
+		expectedValue=logistic(X)*90-45
 		actualValue=plusminus[fixedPlayer]
-		Offset[fixedPlayer]=(expectedValue-actualValue)/TotTime
+		Offset[fixedPlayer]=K*(expectedValue-actualValue)
 		Sum=Sum+Offset[fixedPlayer]
 		NumOfPlayer=NumOfPlayer+1
 		#calculating offset for Team2
@@ -37,15 +37,16 @@ def elo(playerRating,minutesPlayed,Team1,Team2,TotTime,plusminus):
 		new=TotTime-minutesPlayed[Team2][fixedPlayer]
 		m2without=((m2-playerRating[Team2][fixedPlayer]*minutesPlayed[Team2][fixedPlayer])*TotTime)/new
 		#print("effective strength for {} player's team".format(fixedPlayer),m1without,"Effective strength for opp team",m2)
-		minPlayedByPlayer=minutesPlayed[Team2][fixedPlayer]*int(TotTime)
+		minPlayedByPlayer=minutesPlayed[Team2][fixedPlayer]#*int(TotTime)
 		#minWithPlayer=int(TotTime)-minWithoutPlayer
 		PtTeam=minPlayedByPlayer*playerRating[Team2][fixedPlayer]+4*minPlayedByPlayer*m2without
 		PtOppTeam=minPlayedByPlayer*5*m1
 		#print("PointProduction by {}".format(Team),PtTeam)
 		#print("PointProduction by {}".format(OppTeam),PtOppTeam)
-		expectedValue=PtTeam-PtOppTeam
+		X=round(PtTeam-PtOppTeam)
+		expectedValue=logistic(X)*90-45
 		actualValue=plusminus[fixedPlayer]
-		Offset[fixedPlayer]=(expectedValue-actualValue)/TotTime
+		Offset[fixedPlayer]=K*(expectedValue-actualValue)
 		Sum=Sum+Offset[fixedPlayer]
 		NumOfPlayer=NumOfPlayer+1
 
@@ -54,27 +55,35 @@ def elo(playerRating,minutesPlayed,Team1,Team2,TotTime,plusminus):
 	#Updating the player ratings
 	for fixedPlayer in playerRating[Team1]:
 		Offset[fixedPlayer]=Offset[fixedPlayer]-mean
+		#print("Offset",Offset[fixedPlayer])
+		'''if Offset[fixedPlayer]<0:
+			Offset[fixedPlayer]=-1*K*logistic(Offset[fixedPlayer])
+		else:
+			Offset[fixedPlayer]=K*logistic(Offset[fixedPlayer])'''
 		playerRating[Team1][fixedPlayer]=playerRating[Team1][fixedPlayer]+Offset[fixedPlayer]
 		#print("Updated player Rating for {} is".format(fixedPlayer),playerRating[Team1][fixedPlayer],"TEAM:{}".format(Team1))
 	for fixedPlayer in playerRating[Team2]:
 		Offset[fixedPlayer]=Offset[fixedPlayer]-mean
 		playerRating[Team2][fixedPlayer]=playerRating[Team2][fixedPlayer]+Offset[fixedPlayer]
 		#print("Updated player Rating for {} is".format(fixedPlayer),playerRating[Team2][fixedPlayer],"TEAM:{}".format(Team2))
-	time.sleep(10)
+	#time.sleep(10)
 	return playerRating
 	
 csv_file1 = open('TeamMatchups.csv', 'r')
 reader1 = csv.reader(csv_file1)
 i=0
 j=0
+noOfPredictions=0
 minutesPlayed=defaultdict(dict)
 playerRating=defaultdict(dict)
 plusminus=defaultdict(dict)
 duplicate=defaultdict(dict)
 tempTeam=defaultdict(dict)
 check=defaultdict(dict)
+TeamRating=defaultdict(dict)
 checklist=[]
 flog=1
+match=0
 for row1 in reader1:
 	if i>0:
 		s=re.split('\W+',row1[2])
@@ -123,7 +132,13 @@ for row1 in reader1:
 				m2+=playerRating[Team2][players]*minutesPlayed[Team2][players]
 			print("Updated rating for {}".format(Team1),m1)
 			print("updated rating for {}".format(Team2),m2)
-			print(Team1,row1[3],Team2)
+			if m1>m2:
+				outcome='W'
+			else:
+				outcome='L'
+			if outcome==row1[3]:
+				noOfPredictions=noOfPredictions+1
+			print(Team1,row1[3],Team2,noOfPredictions)
 			print("%%%%%%%%%%%% after update%%%%%%%%%%%%%%%")
 			duplicate=playerRating
 			playerRating=elo(playerRating,minutesPlayed,Team1,Team2,int(row1[4]),plusminus)
@@ -133,11 +148,19 @@ for row1 in reader1:
 				m1+=playerRating[Team1][players]*minutesPlayed[Team1][players]
 			for players in playerRating[Team2]:
 				m2+=playerRating[Team2][players]*minutesPlayed[Team2][players]
+			TeamRating[Team1]=m1
+			TeamRating[Team2]=m2
 			print("Updated rating for {}".format(Team1),m1)
 			print("updated rating for {}".format(Team2),m2)
-			time.sleep(4)
+			match=match+1
+			print("Match number",match)
+			sumTeam=0
+			for Teeam in TeamRating:
+				sumTeam=sumTeam+TeamRating[Teeam]
+			print("Sum of team rating",sumTeam)
+			#time.sleep(4)
 		else:
-			print("Trying to repeat")
+			#print("Trying to repeat")
 			#time.sleep(10)
 			checklist.remove(c)
 		
