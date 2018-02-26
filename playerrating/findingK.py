@@ -28,10 +28,14 @@ def K(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus2,
         minPlayedByPlayer = minutesPlayed[Team1][fixedPlayer]  # *int(TotTime)
         s = playerRating[fixedPlayer] + 4 * m1without - 5 * m2
         if minPlayedByPlayer!=0:
+            x3=plusminus1[fixedPlayer] / minPlayedByPlayer
             x1.append(plusminus1[fixedPlayer] / minPlayedByPlayer)
             x2.append(s)
+            Offset[fixedPlayer]=K*minPlayedByPlayer*(x3-s)
+            Sum=Sum+Offset[fixedPlayer]
+            print("fixedPlayerT1",fixedPlayer)
             print("AAAAAAAAAAAAAAA",plusminus1[fixedPlayer] / minPlayedByPlayer,s)
-        NumOfPlayer = NumOfPlayer + 1
+            NumOfPlayer = NumOfPlayer + 1
     # calculating offset for Team2
     for fixedPlayer in plusminus2:
         new = TotTime - minutesPlayed[Team2][fixedPlayer]
@@ -39,25 +43,35 @@ def K(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus2,
         minPlayedByPlayer = minutesPlayed[Team2][fixedPlayer]  # *int(TotTime)
         s=playerRating[fixedPlayer]+4*m2without-5*m1
         if minPlayedByPlayer!=0:
+            x3 = plusminus2[fixedPlayer] / minPlayedByPlayer
             x1.append(plusminus2[fixedPlayer]/minPlayedByPlayer)
             x2.append(s)
+            Offset[fixedPlayer] = K * minPlayedByPlayer * (x3 - s)
+            Sum=Sum+Offset[fixedPlayer]
+            print("fixedPlayerT2", fixedPlayer)
             print("AAAAAAAAAAAAAAA",plusminus2[fixedPlayer] / minPlayedByPlayer,s)
-        NumOfPlayer = NumOfPlayer + 1
+            NumOfPlayer = NumOfPlayer + 1
 
     mean = Sum / NumOfPlayer
     # Updating the player ratings
     sum = 0
     offset = 0
     for fixedPlayer in plusminus1:
-        Offset[fixedPlayer] = round(Offset[fixedPlayer] - mean)
-        playerRating[fixedPlayer] = playerRating[fixedPlayer] + Offset[fixedPlayer]
-        offset = Offset[fixedPlayer] + offset
-        sum = sum + playerRating[fixedPlayer]
+        minPlayedByPlayer = minutesPlayed[Team1][fixedPlayer]
+        if minPlayedByPlayer != 0:
+            print("fixed Player",fixedPlayer)
+            Offset[fixedPlayer] = round(Offset[fixedPlayer] - mean)
+            playerRating[fixedPlayer] = playerRating[fixedPlayer] + Offset[fixedPlayer]
+            offset = Offset[fixedPlayer] + offset
+            sum = sum + playerRating[fixedPlayer]
     for fixedPlayer in plusminus2:
-        Offset[fixedPlayer] = round(Offset[fixedPlayer] - mean)
-        playerRating[fixedPlayer] = playerRating[fixedPlayer] + Offset[fixedPlayer]
-        offset = Offset[fixedPlayer] + offset
-        sum = sum + playerRating[fixedPlayer]
+        minPlayedByPlayer = minutesPlayed[Team2][fixedPlayer]
+        if minPlayedByPlayer != 0:
+            print("fixed Player", fixedPlayer)
+            Offset[fixedPlayer] = round(Offset[fixedPlayer] - mean)
+            playerRating[fixedPlayer] = playerRating[fixedPlayer] + Offset[fixedPlayer]
+            offset = Offset[fixedPlayer] + offset
+            sum = sum + playerRating[fixedPlayer]
     print("The sum of the players", sum, NumOfPlayer, sum / NumOfPlayer)
     print("Sum of offsets", offset)
     return x1,x2,playerRating
