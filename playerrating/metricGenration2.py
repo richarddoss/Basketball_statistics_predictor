@@ -18,23 +18,36 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
     Offset = defaultdict(dict)
     actualValue = defaultdict(dict)
     expectedValue = defaultdict(dict)
+    Total1=0
+    Total2=0
     for players in plusminus1:
         #print("Minutes Played",minutesPlayed[Team1][players],players)
         m1 += playerRating[players] * minutesPlayed[Team1][players]
+        Total1+=minutesPlayed[Team1][players]
     for players in plusminus2:
         m2 += playerRating[players] * minutesPlayed[Team2][players]
+        Total2 += minutesPlayed[Team2][players]
+    #print(Total1,Total2,"AAAAAAAAAA",TotTime)
+    #time.sleep(2)
     for fixedPlayer in plusminus1:
-        new = TotTime - minutesPlayed[Team1][fixedPlayer]
+        new = TotTime - minutesPlayed[Team1][fixedPlayer]*TotTime
         m1without = ((m1 - playerRating[fixedPlayer] * minutesPlayed[Team1][fixedPlayer]) * TotTime) / new
         minPlayedByPlayer = minutesPlayed[Team1][fixedPlayer]  # *int(TotTime)
         PtTeam = minPlayedByPlayer * playerRating[fixedPlayer] + 4 * minPlayedByPlayer * m1without
         PtOppTeam = minPlayedByPlayer * 5 * m2
+        #print("Player Rating",playerRating[fixedPlayer],"Rest of the team",m1without,"Opp Team strength",m2)
+        #time.sleep(2)
         X = round(PtTeam - PtOppTeam)
+        X=X*(TotTime/200)
         x1.append(X)
         x2.append(plusminus1[fixedPlayer])
         expectedValue[fixedPlayer] = round(logistic(X), 2)
         actualValue[fixedPlayer] = round(logistic(plusminus1[fixedPlayer]), 2)
-        Offset[fixedPlayer] = K * (actualValue[fixedPlayer] - expectedValue[fixedPlayer])
+        PtDiff=plusminus1[fixedPlayer]-X
+        #print("Actual score",plusminus1[fixedPlayer],"Expected Score",X,"Strength",X/minPlayedByPlayer)
+        #time.sleep(2)
+        #Offset[fixedPlayer] = K * (actualValue[fixedPlayer] - expectedValue[fixedPlayer])
+        Offset[fixedPlayer] = K * (round(logistic(PtDiff),2))
         Sum = Sum + Offset[fixedPlayer]
         NumOfPlayer = NumOfPlayer + 1
     # calculating offset for Team2
@@ -44,12 +57,19 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
         minPlayedByPlayer = minutesPlayed[Team2][fixedPlayer]  # *int(TotTime)
         PtTeam = minPlayedByPlayer * playerRating[fixedPlayer] + 4 * minPlayedByPlayer * m2without
         PtOppTeam = minPlayedByPlayer * 5 * m1
+        #print("Player Rating", playerRating[fixedPlayer], "Rest of the team", m1without, "Opp Team strength", m2)
+        #time.sleep(2)
         X = round(PtTeam - PtOppTeam)
+        X = X * (TotTime / 200)
         x1.append(X)
         x2.append(plusminus2[fixedPlayer])
         expectedValue[fixedPlayer] = round(logistic(X), 2)
         actualValue[fixedPlayer] = round(logistic(plusminus2[fixedPlayer]), 2)
-        Offset[fixedPlayer] = K * (actualValue[fixedPlayer] - expectedValue[fixedPlayer])
+        PtDiff = plusminus2[fixedPlayer] - X
+        #print("Actual score", plusminus2[fixedPlayer], "Expected Score", X,"Strength",X/minPlayedByPlayer)
+        #time.sleep(2)
+        #Offset[fixedPlayer] = K * (actualValue[fixedPlayer] - expectedValue[fixedPlayer])
+        Offset[fixedPlayer] = K * (round(logistic(PtDiff), 2))
         Sum = Sum + Offset[fixedPlayer]
         NumOfPlayer = NumOfPlayer + 1
 
@@ -117,7 +137,7 @@ for row1 in reader1:
                             #print(minutesPlayed[Team1][row2[0]],row2[0])
                             plusminus1[row2[0]] = int(row2[7])
                             if check[row2[0]] == {}:
-                                playerRating[row2[0]] = 200
+                                playerRating[row2[0]] = 1000
                                 check[row2[0]] = 'Filled'
                                 #print("enter the dragon")
                                 #print(row2[0])
@@ -128,7 +148,7 @@ for row1 in reader1:
                             #print(minutesPlayed[Team2][row2[0]], row2[0])
                             plusminus2[row2[0]] = int(row2[7])
                             if check[row2[0]] == {}:
-                                playerRating[row2[0]] = 200
+                                playerRating[row2[0]] = 1000
                                 check[row2[0]] = 'Filled'
                                 #print("enter the dragon2")
                                 #print(row2[0])
@@ -150,9 +170,9 @@ for row1 in reader1:
                 m1 += playerRating[players] * minutesPlayed[Team1][players]
             for players in plusminus2:
                 m2 += playerRating[players] * minutesPlayed[Team2][players]
-            print("%%%%%%%%%%%%%%%%%  Before Update %%%%%%%%%%%%%%%%")
-            print("Updated rating for {}".format(Team1), round(m1))
-            print("updated rating for {}".format(Team2), round(m2))
+            #print("%%%%%%%%%%%%%%%%%  Before Update %%%%%%%%%%%%%%%%")
+            #print("Updated rating for {}".format(Team1), round(m1))
+            #print("updated rating for {}".format(Team2), round(m2))
             if m1 > m2:
                 outcome = 'W'
             else:
@@ -163,7 +183,8 @@ for row1 in reader1:
             else:
                 W = 0
             #if Team1 == 'LAC' or Team2 == 'LAC':
-            print(Team1, row1[3], Team2, noOfPredictions, match)
+            match = match + 1
+            print(Team1, row1[3], Team2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
             #print("random")
             duplicate = playerRating
             playerRating,x1,x2 = elo(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2,x1,x2)
@@ -175,22 +196,22 @@ for row1 in reader1:
                 m2 += playerRating[players] * minutesPlayed[Team2][players]
             TeamRating[Team1] = m1
             TeamRating[Team2] = m2
-            match = match + 1
-            print("%%%%%%%%%%%% after update%%%%%%%%%%%%%%%")
-            print("Updated rating for {}".format(Team1), round(m1))
-            print("updated rating for {}".format(Team2), round(m2))
-            print("Match number", match)
+
+            #print("%%%%%%%%%%%% after update%%%%%%%%%%%%%%%")
+            #print("Updated rating for {}".format(Team1), round(m1))
+            #print("updated rating for {}".format(Team2), round(m2))
+            #print("Match number", match)
             sumTeam = 0
             for Teeam in TeamRating:
                 sumTeam = sumTeam + TeamRating[Teeam]
-            print("Sum of team rating", sumTeam)
+            #print("Sum of team rating", sumTeam)
             if match == 1230:
                 print(sorted(TeamRating.values()))
                 print(TeamRating)
                 sumTeam=0
                 for Teeam in TeamRating:
                     sumTeam = sumTeam + TeamRating[Teeam]
-                print("Sum of team rating", sumTeam)
+                #print("Sum of team rating", sumTeam)
         # time.sleep(4)
         else:
             # print("Trying to repeat")
@@ -199,10 +220,10 @@ for row1 in reader1:
 
     # print("NEXT ROUND")
     i = i + 1
-x1=np.array(x1)
-x2=np.array(x2)
-plt.scatter(x1.reshape(-1,1), x2.reshape(-1,1),  color='purple')
-plt.show()
+#x1=np.array(x1)
+#x2=np.array(x2)
+#plt.scatter(x1.reshape(-1,1), x2.reshape(-1,1),  color='purple')
+#plt.show()
 csv_file1.close()
 csv_file2.close()
 
