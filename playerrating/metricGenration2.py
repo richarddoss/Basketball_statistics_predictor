@@ -14,7 +14,7 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
     m2 = 0
     NumOfPlayer = 0
     Sum = 0
-    K = 30
+    K = 100
     Offset = defaultdict(dict)
     actualValue = defaultdict(dict)
     expectedValue = defaultdict(dict)
@@ -38,7 +38,7 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
         #print("Player Rating",playerRating[fixedPlayer],"Rest of the team",m1without,"Opp Team strength",m2)
         #time.sleep(2)
         X = round(PtTeam - PtOppTeam)
-        X=X*(TotTime/200)
+        X=X*(TotTime/2500)
         x1.append(X)
         x2.append(plusminus1[fixedPlayer])
         expectedValue[fixedPlayer] = round(logistic(X), 2)
@@ -60,7 +60,7 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
         #print("Player Rating", playerRating[fixedPlayer], "Rest of the team", m1without, "Opp Team strength", m2)
         #time.sleep(2)
         X = round(PtTeam - PtOppTeam)
-        X = X * (TotTime / 200)
+        X = X * (TotTime / 2500)
         x1.append(X)
         x2.append(plusminus2[fixedPlayer])
         expectedValue[fixedPlayer] = round(logistic(X), 2)
@@ -79,11 +79,13 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
     offset=0
     for fixedPlayer in plusminus1:
         Offset[fixedPlayer] = round(Offset[fixedPlayer] - mean)
+        #print("offset", Offset[fixedPlayer])
         playerRating[fixedPlayer] = playerRating[fixedPlayer] + Offset[fixedPlayer]
         offset=Offset[fixedPlayer]+offset
         sum=sum+playerRating[fixedPlayer]
     for fixedPlayer in plusminus2:
         Offset[fixedPlayer] = round(Offset[fixedPlayer] - mean)
+        #print("offset", Offset[fixedPlayer])
         playerRating[fixedPlayer] = playerRating[fixedPlayer] + Offset[fixedPlayer]
         offset = Offset[fixedPlayer] + offset
         sum=sum+playerRating[fixedPlayer]
@@ -99,6 +101,8 @@ i = 0
 j = 0
 noOfPredictions = 0
 minutesPlayed = defaultdict(dict)
+minutesPlayedEstimate = defaultdict(dict)
+NumberMinutes=defaultdict(dict)
 playerRating = defaultdict(dict)
 plusminus = defaultdict(dict)
 duplicate = defaultdict(dict)
@@ -110,6 +114,8 @@ flog = 1
 match = 0
 x1=[]
 x2=[]
+avg=[]
+number=0
 for row1 in reader1:
     plusminus1 = defaultdict(dict)
     plusminus2 = defaultdict(dict)
@@ -132,9 +138,17 @@ for row1 in reader1:
                     if (Team1 == row2[1] or Team2 == row2[1]) and row1[1] == row2[2]:
                         # print(row2[0],"playername",row2[1],"team",row2[2],"date")
                         # time.sleep(2)
+                        if int(row2[5])!=0:
+                            avg.append(int(row2[6])/int(row2[5]))
+                            number+=1
                         if Team1 == row2[1]:
                             minutesPlayed[Team1][row2[0]] = int(row2[5]) / (int(row1[4]))
-                            #print(minutesPlayed[Team1][row2[0]],row2[0])
+                            if minutesPlayedEstimate[row2[0]] == {}:
+                                minutesPlayedEstimate[row2[0]]=minutesPlayed[Team1][row2[0]]
+                                NumberMinutes[row2[0]]=1
+                            else:
+                                minutesPlayedEstimate[row2[0]]=(NumberMinutes[row2[0]]*minutesPlayedEstimate[row2[0]]+minutesPlayed[Team1][row2[0]])/(NumberMinutes[row2[0]]+1)
+                                NumberMinutes[row2[0]]=NumberMinutes[row2[0]]+1
                             plusminus1[row2[0]] = int(row2[7])
                             if check[row2[0]] == {}:
                                 playerRating[row2[0]] = 1000
@@ -145,7 +159,12 @@ for row1 in reader1:
                             #    print("PLAYERRRRRRRRRRRRRR",playerRating[row2[0]])
                         elif Team2==row2[1]:
                             minutesPlayed[Team2][row2[0]] = int(row2[5]) / (int(row1[4]))
-                            #print(minutesPlayed[Team2][row2[0]], row2[0])
+                            if minutesPlayedEstimate[row2[0]] == {}:
+                                minutesPlayedEstimate[row2[0]]=minutesPlayed[Team2][row2[0]]
+                                NumberMinutes[row2[0]]=1
+                            else:
+                                minutesPlayedEstimate[row2[0]]=(NumberMinutes[row2[0]]*minutesPlayedEstimate[row2[0]]+minutesPlayed[Team2][row2[0]])/(NumberMinutes[row2[0]]+1)
+                                NumberMinutes[row2[0]]=NumberMinutes[row2[0]]+1
                             plusminus2[row2[0]] = int(row2[7])
                             if check[row2[0]] == {}:
                                 playerRating[row2[0]] = 1000
@@ -167,9 +186,9 @@ for row1 in reader1:
             m1 = 0
             m2 = 0
             for players in plusminus1:
-                m1 += playerRating[players] * minutesPlayed[Team1][players]
+                m1 += playerRating[players] * minutesPlayedEstimate[players]
             for players in plusminus2:
-                m2 += playerRating[players] * minutesPlayed[Team2][players]
+                m2 += playerRating[players] * minutesPlayedEstimate[players]
             #print("%%%%%%%%%%%%%%%%%  Before Update %%%%%%%%%%%%%%%%")
             #print("Updated rating for {}".format(Team1), round(m1))
             #print("updated rating for {}".format(Team2), round(m2))
@@ -224,6 +243,9 @@ for row1 in reader1:
 #x2=np.array(x2)
 #plt.scatter(x1.reshape(-1,1), x2.reshape(-1,1),  color='purple')
 #plt.show()
+print("&&&&&")
+SUM=sum(avg)
+print("average",SUM/number)
 csv_file1.close()
 csv_file2.close()
 
