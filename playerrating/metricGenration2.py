@@ -117,6 +117,7 @@ duplicate = defaultdict(dict)
 tempTeam = defaultdict(dict)
 check = defaultdict(dict)
 TeamRating = defaultdict(dict)
+HomeAdv = defaultdict(dict)
 checklist = []
 flog = 1
 match = 0
@@ -124,6 +125,7 @@ x1=[]
 x2=[]
 avg=[]
 number=0
+flag=0
 for row1 in reader1:
     plusminus1 = defaultdict(dict)
     plusminus2 = defaultdict(dict)
@@ -133,12 +135,19 @@ for row1 in reader1:
         if len(s) == 2:
             Team1 = s[0]
             Team2 = s[1]
+            flag=1
             c = Team1 + Team2
-        else:
+            HomeAdv[Team1]=0
+            HomeAdv[Team2]=100
+        '''else:
             Team1 = s[0]
             Team2 = s[2]
+            print(s[1])
+            time.sleep(2)
             c = Team2 + Team1
-        if not (c in checklist):
+        '''
+        if (flag==1):
+            flag=0
             for fixedPlayer in minutesPlayed[Team1]:
                 minutesPlayed[Team1][fixedPlayer] = 0
                 plusminus1[fixedPlayer]=0
@@ -202,6 +211,8 @@ for row1 in reader1:
             #print("%%%%%%%%%%%%%%%%%  Before Update %%%%%%%%%%%%%%%%")
             #print("Updated rating for {}".format(Team1), round(m1))
             #print("updated rating for {}".format(Team2), round(m2))
+            m1+=HomeAdv[Team1]
+            m2 += HomeAdv[Team2]
             if m1 > m2:
                 outcome = 'W'
             else:
@@ -243,10 +254,11 @@ for row1 in reader1:
                     sumTeam = sumTeam + TeamRating[Teeam]
                 #print("Sum of team rating", sumTeam)
         # time.sleep(4)
-        else:
+        '''else:
             # print("Trying to repeat")
             # time.sleep(10)
             checklist.remove(c)
+        '''
 
     # print("NEXT ROUND")
     i = i + 1
