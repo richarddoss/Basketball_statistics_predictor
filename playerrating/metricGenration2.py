@@ -29,6 +29,8 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
         Total2 += minutesPlayed[Team2][players]
     #print(Total1,Total2,"AAAAAAAAAA",TotTime)
     #time.sleep(2)
+    w1=0
+    w2=0
     for fixedPlayer in minutesPlayed[Team1]:
         new = TotTime - minutesPlayed[Team1][fixedPlayer]*TotTime
         m1without = ((m1 - playerRating[fixedPlayer] * minutesPlayed[Team1][fixedPlayer]) * TotTime) / new
@@ -52,6 +54,7 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
         Offset[fixedPlayer] = K * (round(logistic(PtDiff),2))
         Sum = Sum + minPlayedByPlayer*Offset[fixedPlayer]
         NumOfPlayer = NumOfPlayer + 1
+        w1+=minPlayedByPlayer
     # calculating offset for Team2
     for fixedPlayer in minutesPlayed[Team2]:
         new = TotTime - minutesPlayed[Team2][fixedPlayer]
@@ -76,6 +79,7 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
         Offset[fixedPlayer] = K * (round(logistic(PtDiff), 2))
         Sum = Sum + minPlayedByPlayer*Offset[fixedPlayer]
         NumOfPlayer = NumOfPlayer + 1
+        w2+=minPlayedByPlayer
 
     #mean = Sum / NumOfPlayer
     #weightedmean= Sum
@@ -98,8 +102,10 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
         offset = Offset[fixedPlayer] + offset
         sum=sum+playerRating[fixedPlayer]
     #print("The sum of the players",sum,NumOfPlayer,sum/NumOfPlayer)
-    #print("Sum of offsets",offset)
-    #time.sleep(2)
+    print("Sum",Sum)
+    print("Sum of offsets",offset)
+    print("w1+w2",w1+w2)
+    time.sleep(2)
     return playerRating,x1,x2
 
 
@@ -204,13 +210,19 @@ for row1 in reader1:
             # rating update for the 2 teams
             m1 = 0
             m2 = 0
+            p1=0
+            p2=0
             for players in minutesPlayed[Team1]:
                 m1 += playerRating[players] * minutesPlayedEstimate[players]
+                p1+=playerRating[players]
             for players in minutesPlayed[Team2]:
                 m2 += playerRating[players] * minutesPlayedEstimate[players]
-            #print("%%%%%%%%%%%%%%%%%  Before Update %%%%%%%%%%%%%%%%")
-            #print("Updated rating for {}".format(Team1), round(m1))
-            #print("updated rating for {}".format(Team2), round(m2))
+                p2+=playerRating[players]
+            print("%%%%%%%%%%%%%%%%%  Before Update %%%%%%%%%%%%%%%%")
+            print("Updated rating for {}".format(Team1), round(p1))
+            print("updated rating for {}".format(Team2), round(p2))
+            print("total",p1+p2)
+            #time.sleep(2)
             m1+=HomeAdv[Team1]
             m2 += HomeAdv[Team2]
             if m1 > m2:
@@ -230,16 +242,22 @@ for row1 in reader1:
             playerRating,x1,x2 = elo(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2,x1,x2)
             m1 = 0
             m2 = 0
+            p1=0
+            p2=0
             for players in minutesPlayed[Team1]:
                 m1 += playerRating[players] * minutesPlayed[Team1][players]
+                p1+=playerRating[players]
             for players in minutesPlayed[Team2]:
                 m2 += playerRating[players] * minutesPlayed[Team2][players]
-            TeamRating[Team1] = m1
-            TeamRating[Team2] = m2
+                p2+=playerRating[players]
+            TeamRating[Team1] = p1
+            TeamRating[Team2] = p2
 
-            #print("%%%%%%%%%%%% after update%%%%%%%%%%%%%%%")
-            #print("Updated rating for {}".format(Team1), round(m1))
-            #print("updated rating for {}".format(Team2), round(m2))
+            print("%%%%%%%%%%%% after update%%%%%%%%%%%%%%%")
+            print("Updated rating for {}".format(Team1), round(p1))
+            print("updated rating for {}".format(Team2), round(p2))
+            print("total",p1+p2)
+            #time.sleep(2)
             #print("Match number", match)
             sumTeam = 0
             for Teeam in TeamRating:
