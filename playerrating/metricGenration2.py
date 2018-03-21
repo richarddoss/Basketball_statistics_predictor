@@ -20,13 +20,17 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
     expectedValue = defaultdict(dict)
     Total1=0
     Total2=0
+    s1=0
     for players in minutesPlayed[Team1]:
         #print("Minutes Played",minutesPlayed[Team1][players],players)
         m1 += playerRating[players] * minutesPlayed[Team1][players]
+        s1+=playerRating[players]
         Total1+=minutesPlayed[Team1][players]
     for players in minutesPlayed[Team2]:
+        print("Minutes Played111", minutesPlayed[Team2][players], players)
         m2 += playerRating[players] * minutesPlayed[Team2][players]
         Total2 += minutesPlayed[Team2][players]
+        s1+=playerRating[players]
     #print(Total1,Total2,"AAAAAAAAAA",TotTime)
     #time.sleep(2)
     w1=0
@@ -57,6 +61,7 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
         w1+=minPlayedByPlayer
     # calculating offset for Team2
     for fixedPlayer in minutesPlayed[Team2]:
+        print("Minutes Played22", minutesPlayed[Team2][fixedPlayer], fixedPlayer)
         new = TotTime - minutesPlayed[Team2][fixedPlayer]
         m2without = ((m2 - playerRating[fixedPlayer] * minutesPlayed[Team2][fixedPlayer]) * TotTime) / new
         minPlayedByPlayer = minutesPlayed[Team2][fixedPlayer]  # *int(TotTime)
@@ -84,28 +89,29 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
     #mean = Sum / NumOfPlayer
     #weightedmean= Sum
     # Updating the player ratings
-    print("next phase")
+    #print("next phase")
     sum=0
     offset=0
     for fixedPlayer in minutesPlayed[Team1]:
         #Offset[fixedPlayer] = round(Offset[fixedPlayer] - mean)
-        Offset[fixedPlayer]=minutesPlayed[Team1][fixedPlayer]*(2*Offset[fixedPlayer]-Sum)
+        Offset[fixedPlayer]=minutesPlayed[Team1][fixedPlayer]*(2*Offset[fixedPlayer]-Sum/w1)
         #print("offset", Offset[fixedPlayer])
         playerRating[fixedPlayer] = playerRating[fixedPlayer] + Offset[fixedPlayer]
         offset=Offset[fixedPlayer]+offset
         sum=sum+playerRating[fixedPlayer]
     for fixedPlayer in minutesPlayed[Team2]:
+        print("Minutes Played33", minutesPlayed[Team2][fixedPlayer], fixedPlayer)
         #Offset[fixedPlayer] = round(Offset[fixedPlayer] - mean)
-        Offset[fixedPlayer] = minutesPlayed[Team2][fixedPlayer] * (2 * Offset[fixedPlayer] - Sum)
+        Offset[fixedPlayer] = minutesPlayed[Team2][fixedPlayer] * (2 * Offset[fixedPlayer] - Sum/w2)
         #print("offset", Offset[fixedPlayer])
         playerRating[fixedPlayer] = playerRating[fixedPlayer] + Offset[fixedPlayer]
         offset = Offset[fixedPlayer] + offset
         sum=sum+playerRating[fixedPlayer]
     #print("The sum of the players",sum,NumOfPlayer,sum/NumOfPlayer)
-    print("Sum",Sum)
-    print("Sum of offsets",offset)
-    print("w1+w2",w1+w2)
-    time.sleep(2)
+    #print("Sum befre",s1,"Sum after",sum)
+    #print("Sum of offsets",offset)
+    #print("w1+w2",w1+w2)
+    #time.sleep(2)
     return playerRating,x1,x2
 
 
@@ -176,12 +182,14 @@ for row1 in reader1:
                             plusminus1[row2[0]] = int(row2[7])
                             if check[row2[0]] == {}:
                                 playerRating[row2[0]] = 1000
+                                print(row2[0])
                                 check[row2[0]] = 'Filled'
                         elif Team2==row2[1]:
                             minutesPlayed[Team2][row2[0]] = int(row2[5]) / (int(row1[4]))
                             plusminus2[row2[0]] = int(row2[7])
                             if check[row2[0]] == {}:
                                 playerRating[row2[0]] = 1000
+                                print(row2[0])
                                 check[row2[0]] = 'Filled'
                         else:
                             print("HHHHHHHHHEEEEEEEEEEELLLLLLLLLLOOOOOOOOOOOOOOOOOOOOOOOOOOO")
@@ -200,6 +208,7 @@ for row1 in reader1:
                     NumberMinutes[fixedPlayer] = NumberMinutes[fixedPlayer] + 1
             for fixedPlayer in minutesPlayed[Team2]:
                 if minutesPlayedEstimate[fixedPlayer] == {}:
+                    print(fixedPlayer)
                     minutesPlayedEstimate[fixedPlayer] = minutesPlayed[Team2][fixedPlayer]
                     NumberMinutes[fixedPlayer] = 1
                 else:
@@ -215,13 +224,27 @@ for row1 in reader1:
             for players in minutesPlayed[Team1]:
                 m1 += playerRating[players] * minutesPlayedEstimate[players]
                 p1+=playerRating[players]
+                if players=="Dahntay Jones":
+                    print("got him",playerRating[players])
             for players in minutesPlayed[Team2]:
                 m2 += playerRating[players] * minutesPlayedEstimate[players]
                 p2+=playerRating[players]
-            print("%%%%%%%%%%%%%%%%%  Before Update %%%%%%%%%%%%%%%%")
-            print("Updated rating for {}".format(Team1), round(p1))
-            print("updated rating for {}".format(Team2), round(p2))
-            print("total",p1+p2)
+                print("got him",playerRating[players],players)
+            #print("%%%%%%%%%%%%%%%%%  Before Update %%%%%%%%%%%%%%%%")
+            #print("Updated rating for {}".format(Team1), round(p1))
+            #print("updated rating for {}".format(Team2), round(p2))
+            print("total1",p1+p2)
+            sumTeam = 0
+            #TeamRating[Team1]=p1
+            #TeamRating[Team2]=p2
+            for Teeam in TeamRating:
+                if Teeam!=Team1 and Teeam!=Team2:
+                    sumTeam = sumTeam + TeamRating[Teeam]
+                    print(Teeam,TeamRating[Teeam])
+            print(Team1,p1)
+            print(Team2,p2)
+            print("Sum of team rating1", sumTeam+p1+p2)
+
             #time.sleep(2)
             m1+=HomeAdv[Team1]
             m2 += HomeAdv[Team2]
@@ -236,9 +259,9 @@ for row1 in reader1:
                 W = 0
             #if Team1 == 'LAC' or Team2 == 'LAC':
             match = match + 1
-            print(Team1, row1[3], Team2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
+            #print(Team1, row1[3], Team2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
             #print("random")
-            duplicate = playerRating
+            #duplicate = playerRating
             playerRating,x1,x2 = elo(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2,x1,x2)
             m1 = 0
             m2 = 0
@@ -247,26 +270,40 @@ for row1 in reader1:
             for players in minutesPlayed[Team1]:
                 m1 += playerRating[players] * minutesPlayed[Team1][players]
                 p1+=playerRating[players]
+                if players=="Dahntay Jones":
+                    print("got him",playerRating[players])
             for players in minutesPlayed[Team2]:
                 m2 += playerRating[players] * minutesPlayed[Team2][players]
                 p2+=playerRating[players]
+                if players=="Dahntay Jones":
+                    print("got him",playerRating[players])
             TeamRating[Team1] = p1
             TeamRating[Team2] = p2
-
-            print("%%%%%%%%%%%% after update%%%%%%%%%%%%%%%")
-            print("Updated rating for {}".format(Team1), round(p1))
-            print("updated rating for {}".format(Team2), round(p2))
-            print("total",p1+p2)
+            for players in minutesPlayed["BOS"]:
+                print("got him", playerRating[players],players,minutesPlayed["BOS"][players])
+            #print("%%%%%%%%%%%% after update%%%%%%%%%%%%%%%")
+            #print("Updated rating for {}".format(Team1), round(p1))
+            #print("updated rating for {}".format(Team2), round(p2))
+            print("total2",p1+p2)
             #time.sleep(2)
             #print("Match number", match)
             sumTeam = 0
             for Teeam in TeamRating:
-                sumTeam = sumTeam + TeamRating[Teeam]
-            print("Sum of team rating", sumTeam)
+                if Teeam!=Team1 and Teeam!=Team2:
+                    sumTeam = sumTeam + TeamRating[Teeam]
+                    print(Teeam,TeamRating[Teeam])
+            print(Team1,p1)
+            print(Team2,p2)
+            print("Sum of team rating2", sumTeam+p1+p2)
+            TotalPlayer=0
+            for Team in playerRating:
+                TotalPlayer+=1
+            print('Total number of players',TotalPlayer)
+
             #time.sleep(2)
             if match == 1230:
-                print(sorted(TeamRating.values()))
-                print(TeamRating)
+                #print(sorted(TeamRating.values()))
+                #print(TeamRating)
                 sumTeam=0
                 for Teeam in TeamRating:
                     sumTeam = sumTeam + TeamRating[Teeam]
