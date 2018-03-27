@@ -11,7 +11,7 @@ writer1=csv.writer(csv_file1)
 writer1.writerow(["Team1 v/s Team2","Game Number","W/L","Team1 strength","Team2 strength","Total Time 1","Total Time 2"])
 csv_file2=open("playerstats.csv","w")
 writer2=csv.writer(csv_file2)
-writer2.writerow(["matchnumber","Player Name","Minutes Played","+/-","Player strength","True Player Strength"])
+writer2.writerow(["matchnumber","Player Name","Team","Minutes Played","+/-","Player strength","True Player Strength"])
 #csv_file2.close()
 playerRating=defaultdict(dict)
 minutesPlayed=defaultdict(dict)
@@ -83,7 +83,7 @@ for i in range(0,10):
         #time.sleep(2)
         PlusMinus[Team1][fixedPlayer]=((playerRating[Team1][fixedPlayer]+4*m1without-5*m2)*minutesPlayedbyPlayer)/2500
         print("plusminus",PlusMinus[Team1][fixedPlayer])
-        writer2.writerow([str(i),fixedPlayer,minutesPlayedbyPlayer,PlusMinus[Team1][fixedPlayer],playerRating[Team1][fixedPlayer],playerRatingTrue[Team1][fixedPlayer]])
+        writer2.writerow([str(i),fixedPlayer,Team1,minutesPlayedbyPlayer,PlusMinus[Team1][fixedPlayer],playerRating[Team1][fixedPlayer],playerRatingTrue[Team1][fixedPlayer]])
     for fixedPlayer in playerRating[Team2]:
         minutesPlayedbyPlayer=minutesPlayed[Team2][fixedPlayer]
         m2without=((m2*TotalTime2)-minutesPlayed[Team2][fixedPlayer]*playerRating[Team2][fixedPlayer])/(TotalTime1-minutesPlayedbyPlayer)
@@ -91,7 +91,7 @@ for i in range(0,10):
         #time.sleep(2)
         PlusMinus[Team2][fixedPlayer]=((playerRating[Team2][fixedPlayer]+4*m2without-5*m1)*minutesPlayedbyPlayer)/2500
         print("plusminus", PlusMinus[Team2][fixedPlayer])
-        writer2.writerow([str(i), fixedPlayer, minutesPlayedbyPlayer, PlusMinus[Team2][fixedPlayer],playerRating[Team2][fixedPlayer],playerRatingTrue[Team2][fixedPlayer]])
+        writer2.writerow([str(i), fixedPlayer, Team2, minutesPlayedbyPlayer, PlusMinus[Team2][fixedPlayer],playerRating[Team2][fixedPlayer],playerRatingTrue[Team2][fixedPlayer]])
     PTS1=m1*TotalTime1
     PTS2=m2*TotalTime2
     if PTS1>PTS2:
