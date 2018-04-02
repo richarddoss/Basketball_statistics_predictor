@@ -83,6 +83,7 @@ tempTeam = defaultdict(dict)
 check = defaultdict(dict)
 TeamRating = defaultdict(dict)
 HomeAdv = defaultdict(dict)
+TrueStrength= defaultdict(dict)
 checklist = []
 flog = 1
 match = 0
@@ -114,26 +115,28 @@ for row1 in reader1:
             reader2 = csv.reader(csv_file2)
             for row2 in reader2:
                 if j > 0:
-                    print("enter inner lopp")
-                    time.sleep(2)
+                    #print("enter inner lopp")
+                    #time.sleep(2)
                     if matchNumber==row2[0]:
                         #print(row2[1],"playername",row2[2],"team")
                         # time.sleep(2)
                         if Team1 == row2[2]:
                             minutesPlayed[Team1][row2[1]] = float(row2[3]) / (float(row1[5]))
                             plusminus1[row2[1]] = float(row2[4])
+                            TrueStrength[row2[1]]=float(row2[6])
                             if check[row2[1]] == {}:
                                 playerRating[row2[1]] = 1000
                                 print(row2[1],playerRating[row2[1]],minutesPlayed[Team1][row2[1]])
-                                time.sleep(2)
+                                #time.sleep(2)
                                 check[row2[1]] = 'Filled'
                         elif Team2==row2[2]:
                             minutesPlayed[Team2][row2[1]] = float(row2[3]) / (float(row1[6]))
                             plusminus2[row2[1]] = float(row2[4])
+                            TrueStrength[row2[1]] = float(row2[6])
                             if check[row2[1]] == {}:
                                 playerRating[row2[1]] = 1000
                                 print(row2[1], playerRating[row2[1]],minutesPlayed[Team2][row2[1]])
-                                time.sleep(2)
+                                #time.sleep(2)
                                 check[row2[1]] = 'Filled'
                 j = j + 1
             j = 0
@@ -165,11 +168,12 @@ for row1 in reader1:
                 m1 += playerRating[players] * minutesPlayedEstimate[players]
                 p1+=playerRating[players]
                 print(players,playerRating[players])
-                time.sleep(2)
+                #time.sleep(2)
             for players in minutesPlayed[Team2]:
                 m2 += playerRating[players] * minutesPlayedEstimate[players]
                 p2+=playerRating[players]
                 print(players, playerRating[players])
+                #time.sleep(2)
             #print("%%%%%%%%%%%%%%%%%  Before Update %%%%%%%%%%%%%%%%")
             #print("Updated rating for {}".format(Team1), round(p1))
             #print("updated rating for {}".format(Team2), round(p2))
@@ -199,6 +203,21 @@ for row1 in reader1:
             match = match + 1
             print(Team1, row1[2], Team2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
             playerRating= elo(playerRating, minutesPlayed, Team1, Team2, float(row1[5]), float(row1[6]), plusminus1, plusminus2)
+            # updated rating
+            m1 = 0
+            m2 = 0
+            p1 = 0
+            p2 = 0
+            for players in minutesPlayed[Team1]:
+                m1 += playerRating[players] * minutesPlayedEstimate[players]
+                p1 += playerRating[players]
+                print(players, playerRating[players])
+                #time.sleep(2)
+            for players in minutesPlayed[Team2]:
+                m2 += playerRating[players] * minutesPlayedEstimate[players]
+                p2 += playerRating[players]
+                print(players, playerRating[players])
+                #time.sleep(2)
             '''
             m1 = 0
             m2 = 0
@@ -236,7 +255,14 @@ for row1 in reader1:
                     TotalPlayer+=1
             #print('Total number of players',TotalPlayer)
             '''
-            if match == 1230:
+            if match == 90:
+                for players in minutesPlayed[Team1]:
+                    print(players, playerRating[players])
+                    #time.sleep(2)
+                for players in minutesPlayed[Team2]:
+                    print(players, playerRating[players])
+                    #time.sleep(2)
+
                 #print(sorted(TeamRating.values()))
                 #print(TeamRating)
                 sumTeam=0
@@ -247,5 +273,10 @@ for row1 in reader1:
 SUM=sum(avg)    # computing the constant value
 #print("average",SUM/number)
 csv_file1.close()
+csv_file3= open("cross.csv",'w')
+writer3=csv.writer(csv_file3)
+writer3.writerow(["Player Name","Estimated Strength","True Strength"])
+for player in playerRating:
+    writer3.writerow([player,playerRating[player],TrueStrength[player]])
 
 
