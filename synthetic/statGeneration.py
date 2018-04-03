@@ -30,7 +30,7 @@ for i in range(1,16):
         playerRatingTrue[Team][player]=round((np.random.beta(1.5,5)*600)+900)
         minutesPlayedTrue[Team][player]=timePlayedint[j-1]
 #matchup Generation
-for i in range(0,1000):
+for i in range(0,10000):
     [T1,T2]=random.sample(range(1,16),2)
     Team1="T"+str(T1)
     Team2="T"+str(T2)
