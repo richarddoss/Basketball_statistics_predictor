@@ -55,6 +55,7 @@ for i in range(0,10000):
         print(minutesPlayed[Team1][fixedPlayer],playerRating[Team1][fixedPlayer], Team1, fixedPlayer)
         TotalTime1+=minutesPlayed[Team1][fixedPlayer]
     print("TotalTime 1",TotalTime1)
+    time.sleep(2)
     k=0
     for fixedPlayer in playerRatingTrue[Team2]:
         playerRating[Team2][fixedPlayer]=np.random.normal(playerRatingTrue[Team2][fixedPlayer],300)
@@ -64,6 +65,7 @@ for i in range(0,10000):
         print(minutesPlayed[Team2][fixedPlayer], playerRating[Team2][fixedPlayer], Team2, fixedPlayer)
         TotalTime2+=minutesPlayed[Team2][fixedPlayer]
     print("Total TIme 2",TotalTime2)
+    time.sleep(2)
     m1=0
     m2=0
     for fixedPlayer in playerRatingTrue[Team1]:

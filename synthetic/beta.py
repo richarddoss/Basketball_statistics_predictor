@@ -5,5 +5,9 @@ a=3
 b=3
 dist = beta(1.5, 5)
 x = np.linspace(0, 1, 1002)[1:-1]
-plt.plot(x, dist.pdf(x))
+x1=x*600+900
+plt.plot(x1, dist.pdf(x))
+plt.xlabel("Player's true strength")
+plt.ylabel("Probability density")
+plt.title("Distribution of the strengths of professional basketball players")
 plt.show()
