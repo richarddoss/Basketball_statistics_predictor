@@ -126,7 +126,7 @@ for row1 in reader1:
                             TrueStrength[row2[1]]=float(row2[6])
                             if check[row2[1]] == {}:
                                 playerRating[row2[1]] = 1000
-                                print(row2[1],playerRating[row2[1]],minutesPlayed[Team1][row2[1]])
+                                #print(row2[1],playerRating[row2[1]],minutesPlayed[Team1][row2[1]])
                                 #time.sleep(2)
                                 check[row2[1]] = 'Filled'
                         elif Team2==row2[2]:
@@ -135,7 +135,7 @@ for row1 in reader1:
                             TrueStrength[row2[1]] = float(row2[6])
                             if check[row2[1]] == {}:
                                 playerRating[row2[1]] = 1000
-                                print(row2[1], playerRating[row2[1]],minutesPlayed[Team2][row2[1]])
+                                #print(row2[1], playerRating[row2[1]],minutesPlayed[Team2][row2[1]])
                                 #time.sleep(2)
                                 check[row2[1]] = 'Filled'
                 j = j + 1
@@ -167,12 +167,12 @@ for row1 in reader1:
             for players in minutesPlayed[Team1]:
                 m1 += playerRating[players] * minutesPlayedEstimate[players]
                 p1+=playerRating[players]
-                print(players,playerRating[players])
+                #print(players,playerRating[players])
                 #time.sleep(2)
             for players in minutesPlayed[Team2]:
                 m2 += playerRating[players] * minutesPlayedEstimate[players]
                 p2+=playerRating[players]
-                print(players, playerRating[players])
+                #print(players, playerRating[players])
                 #time.sleep(2)
             #print("%%%%%%%%%%%%%%%%%  Before Update %%%%%%%%%%%%%%%%")
             #print("Updated rating for {}".format(Team1), round(p1))
@@ -211,12 +211,12 @@ for row1 in reader1:
             for players in minutesPlayed[Team1]:
                 m1 += playerRating[players] * minutesPlayedEstimate[players]
                 p1 += playerRating[players]
-                print(players, playerRating[players])
+                #print(players, playerRating[players])
                 #time.sleep(2)
             for players in minutesPlayed[Team2]:
                 m2 += playerRating[players] * minutesPlayedEstimate[players]
                 p2 += playerRating[players]
-                print(players, playerRating[players])
+                #print(players, playerRating[players])
                 #time.sleep(2)
             '''
             m1 = 0

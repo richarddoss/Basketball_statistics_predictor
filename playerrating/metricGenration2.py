@@ -14,7 +14,7 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
     m2 = 0
     NumOfPlayer = 0
     Sum = 0
-    K = 500
+    K = 800
     Offset = defaultdict(dict)
     for players in minutesPlayed[Team1]:
         #print("Minutes Played",minutesPlayed[Team1][players],players)
