@@ -7,14 +7,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def logistic(x):
-    y = 1 / (1 + pow(10, -(x) / 40))
+    y = (1 / (1 + pow(10, -(x) / 40)))-0.5
     return (y)
 def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus2):
     m1 = 0
     m2 = 0
     NumOfPlayer = 0
     Sum = 0
-    K = 800
+    K = 1000
     Offset = defaultdict(dict)
     for players in minutesPlayed[Team1]:
         #print("Minutes Played",minutesPlayed[Team1][players],players)
@@ -34,9 +34,9 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
         X=X*(TotTime/2500)
         PtDiff=plusminus1[fixedPlayer]-X
         Offset[fixedPlayer] = K * (round(logistic(PtDiff),2))
-        Sum = Sum + minPlayedByPlayer*Offset[fixedPlayer]
+        Sum = Sum + 5*minPlayedByPlayer*Offset[fixedPlayer]
         NumOfPlayer = NumOfPlayer + 1
-        w1+=minPlayedByPlayer
+        w1+=(5*minPlayedByPlayer)
     # calculating offset for Team2
     for fixedPlayer in minutesPlayed[Team2]:
         new = TotTime - minutesPlayed[Team2][fixedPlayer]
@@ -48,20 +48,20 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
         X = X * (TotTime / 2500)
         PtDiff = plusminus2[fixedPlayer] - X
         Offset[fixedPlayer] = K * (round(logistic(PtDiff), 2))
-        Sum = Sum + minPlayedByPlayer*Offset[fixedPlayer]
+        Sum = Sum + 5*minPlayedByPlayer*Offset[fixedPlayer]
         NumOfPlayer = NumOfPlayer + 1
-        w2+=minPlayedByPlayer
+        w2+=(5*minPlayedByPlayer)
     # Updating the player ratings
     #print("next phase")
     sum=0
     offset=0
     for fixedPlayer in minutesPlayed[Team1]:
-        Offset[fixedPlayer]=minutesPlayed[Team1][fixedPlayer]*(2*Offset[fixedPlayer]-Sum/w1)
+        Offset[fixedPlayer]=5*minutesPlayed[Team1][fixedPlayer]*(2*Offset[fixedPlayer]-Sum/w1)
         playerRating[fixedPlayer] = playerRating[fixedPlayer] + Offset[fixedPlayer]
         offset=Offset[fixedPlayer]+offset
         sum=sum+playerRating[fixedPlayer]
     for fixedPlayer in minutesPlayed[Team2]:
-        Offset[fixedPlayer] = minutesPlayed[Team2][fixedPlayer] * (2 * Offset[fixedPlayer] - Sum/w2)
+        Offset[fixedPlayer] = 5*minutesPlayed[Team2][fixedPlayer] * (2 * Offset[fixedPlayer] - Sum/w2)
         playerRating[fixedPlayer] = playerRating[fixedPlayer] + Offset[fixedPlayer]
         offset = Offset[fixedPlayer] + offset
         sum=sum+playerRating[fixedPlayer]
