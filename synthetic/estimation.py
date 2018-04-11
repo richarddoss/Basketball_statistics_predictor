@@ -6,8 +6,9 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 def logistic(x):
-    y = 1 / (1 + pow(10, -(x) / 40))
+    y = (1 / (1 + pow(10, -(x) / 40)))-0.5
     return (y)
 def elo(playerRating, minutesPlayed, Team1, Team2, TotTime1, TotTime2, plusminus1,plusminus2):
     m1 = 0
@@ -67,6 +68,7 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime1, TotTime2, plusminus
         sum=sum+playerRating[fixedPlayer]
     return playerRating
 
+#statGeneration.Statsgen()
 print("hello")
 csv_file1 = open('MatchupGenerate.csv', 'r')
 reader1 = csv.reader(csv_file1)
