@@ -28,7 +28,7 @@ def generateTrueStrength():
     return playerRatingTrue,minutesPlayedTrue
 
 
-def statsGenerate(playerRatingTrue,minutesPlayedTrue):
+def statsGenerate(playerRatingTrue,minutesPlayedTrue,matches):
     csv_file1 = open('MatchupGenerate.csv', 'w')
     writer1=csv.writer(csv_file1)
     writer1.writerow(["Team1 v/s Team2","Game Number","W/L","Team1 strength","Team2 strength","Total Time 1","Total Time 2"])
@@ -45,7 +45,7 @@ def statsGenerate(playerRatingTrue,minutesPlayedTrue):
     minutesPlayed=defaultdict(dict)
     PlusMinus=defaultdict(dict)
     #matchup Generation
-    for i in range(0,1000):
+    for i in range(0,matches):
         [T1,T2]=random.sample(range(1,17),2)
         Team1="T"+str(T1)
         Team2="T"+str(T2)
