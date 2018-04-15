@@ -118,6 +118,7 @@ def statsGenerate(playerRatingTrue,minutesPlayedTrue,matches):
     csv_file3.close()
     csv_file4.close()
     print("STATS GENERATED")
+    return(playerRating,minutesPlayed)
 
 
 

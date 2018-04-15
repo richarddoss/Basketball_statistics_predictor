@@ -91,7 +91,7 @@ def estimate(K):
         plusminus1 = defaultdict(dict)
         plusminus2 = defaultdict(dict)
         if i > 0:
-            print("MATCH NUMBER:",i)
+            #print("MATCH NUMBER:",i)
             matchNumber=row1[1]
             s = re.split('\W+', row1[0])
             #print(s)
@@ -174,7 +174,7 @@ def estimate(K):
     csv_file1.close()
     print("Number of correct predicitons:" ,noOfPredictions,"Total number of games:", match, "Prediction Rate", noOfPredictions / match)
     print("ESTIMATED")
-    return playerRating,TrueStrength
+    return playerRating,minutesPlayedEstimate
 
 def store(playerRating,TrueStrength):
     csv_file3= open("cross.csv",'w')
@@ -194,6 +194,17 @@ def MeanSquareError(playerRating,TrueStrength):
     #print(sum,number)
     time.sleep(5)
     return(MSE)
+
+def playerToTeamRating(players,time,timeTrue):
+    teamRating=defaultdict(dict)
+    for i in range(1,17):
+        Team="T"+i
+        for player in timeTrue[Team]:
+            teamRating[Team]+=players[player]*time[player]
+        teamRating[Team]=teamRating[Team]/240
+    return(teamRating)
+
+
 
 
 

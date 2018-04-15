@@ -9,14 +9,27 @@ import random
 import statGeneration as s
 import estimation as e
 playerRatingTrue,minutesPlayedTrue=s.generateTrueStrength()
-s.statsGenerate(playerRatingTrue,minutesPlayedTrue,1000)
 K=[20,100,200,500,750,1000]
-MSE=[0,0,0,0,0,0]
-playerRating,TrueStrength=e.estimate(15)
-'''
+MSE=np.zeros((6,10))
+#playerRating,TrueStrength=e.estimate(15)
+for j in range(10):
+    print("Iteration",j)
+    s.statsGenerate(playerRatingTrue,minutesPlayedTrue,1000)
+    for i in range(6):
+        playerRating,minutesPlayedEstimate=e.estimate(K[i])
+        teamRatingTrue=playerToTeamRating(playerRatingTrue,minutesPlayedTrue,minutesPlayedTrue)
+        teamRating = playerToTeamRating(playerRating, minutesPlayedEstimate, minutesPlayedTrue)
+        MSE[i][j]=e.MeanSquareError(teamRating,teamRatingTrue)
+MSEfinal=np.zeros(6)
+csv_file1 = open('MSEvalues.csv', 'w')
+writer1=csv.writer(csv_file1)
+writer1.writerow(["k value","Mean Square Error"])
 for i in range(6):
-    playerRating,TrueStrength=e.estimate(K[i])
-    MSE[i]=e.MeanSquareError(playerRating,TrueStrength)
-plt.plot(MSE)
+    MSEfinal[i]=np.mean(MSE[i])
+    writer1.writerow([K[i],MSEfinal[i]])
+csv_file1.close()
+plt.plot(K,MSEfinal)
+plt.xlabel("K value")
+plt.ylabel("Mean square error")
+plt.title("Performance metric for the proposed algorithm")
 plt.show()
-'''
