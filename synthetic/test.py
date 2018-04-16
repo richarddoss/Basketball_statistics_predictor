@@ -9,6 +9,8 @@ import random
 import statGeneration as s
 import estimation as e
 playerRatingTrue,minutesPlayedTrue=s.generateTrueStrength()
+teamRatingTrue=e.playerToTeamRating(playerRatingTrue,minutesPlayedTrue,minutesPlayedTrue)
+time.sleep(20)
 K=[20,100,200,500,750,1000]
 MSE=np.zeros((6,10))
 #playerRating,TrueStrength=e.estimate(15)
@@ -17,8 +19,8 @@ for j in range(10):
     s.statsGenerate(playerRatingTrue,minutesPlayedTrue,1000)
     for i in range(6):
         playerRating,minutesPlayedEstimate=e.estimate(K[i])
-        teamRatingTrue=playerToTeamRating(playerRatingTrue,minutesPlayedTrue,minutesPlayedTrue)
-        teamRating = playerToTeamRating(playerRating, minutesPlayedEstimate, minutesPlayedTrue)
+        teamRatingTrue=e.playerToTeamRating(playerRatingTrue,minutesPlayedTrue,minutesPlayedTrue)
+        teamRating = e.playerToTeamRating1(playerRating, minutesPlayedEstimate, minutesPlayedTrue)
         MSE[i][j]=e.MeanSquareError(teamRating,teamRatingTrue)
 MSEfinal=np.zeros(6)
 csv_file1 = open('MSEvalues.csv', 'w')

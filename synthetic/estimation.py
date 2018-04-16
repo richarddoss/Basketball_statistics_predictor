@@ -198,9 +198,22 @@ def MeanSquareError(playerRating,TrueStrength):
 def playerToTeamRating(players,time,timeTrue):
     teamRating=defaultdict(dict)
     for i in range(1,17):
-        Team="T"+i
+        Team="T"+str(i)
+        teamRating[Team]=0
         for player in timeTrue[Team]:
-            teamRating[Team]+=players[player]*time[player]
+            #print(player,time[player],players[player])
+            teamRating[Team]+= players[Team][player]* time[Team][player]
+        teamRating[Team]=teamRating[Team]/240
+    return(teamRating)
+
+def playerToTeamRating1(players,time,timeTrue):
+    teamRating=defaultdict(dict)
+    for i in range(1,17):
+        Team="T"+str(i)
+        teamRating[Team]=0
+        for player in timeTrue[Team]:
+            #print(player,time[player],players[player])
+            teamRating[Team]+= players[player]* time[player]
         teamRating[Team]=teamRating[Team]/240
     return(teamRating)
 
