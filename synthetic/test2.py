@@ -8,11 +8,18 @@ import numpy as np
 import random
 import statGeneration as s
 import estimation as e
+import elosynthetic as e1
 playerRatingTrue,minutesPlayedTrue=s.generateTrueStrength()
 teamRatingTrue=e.playerToTeamRating(playerRatingTrue,minutesPlayedTrue,minutesPlayedTrue)
 time.sleep(20)
 K=[20,100,200,500,750,1000]
 MSE=np.zeros(6)
+s.statsGenerate(playerRatingTrue, minutesPlayedTrue, 1000)
+teamRating=e1.estimate1(K[0])
+teamRatingTrue=e.playerToTeamRating(playerRatingTrue,minutesPlayedTrue,minutesPlayedTrue)
+MSE=e.MeanSquareError(teamRating,teamRatingTrue)
+print("MSE",MSE)
+'''
 #playerRating,TrueStrength=e.estimate(15)
 for j in range(10):
     print("Iteration",j)
@@ -36,3 +43,4 @@ plt.xlabel("K value")
 plt.ylabel("Mean square error")
 plt.title("Performance metric for the proposed algorithm")
 plt.show()
+'''

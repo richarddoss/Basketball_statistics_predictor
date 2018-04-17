@@ -214,7 +214,7 @@ def playerToTeamRating1(players,time,timeTrue):
         for player in timeTrue[Team]:
             #print(player,time[player],players[player])
             teamRating[Team]+= players[player]* time[player]
-        teamRating[Team]=teamRating[Team]/240
+        teamRating[Team]=teamRating[Team]
     return(teamRating)
 
 
