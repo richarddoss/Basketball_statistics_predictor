@@ -172,8 +172,8 @@ def estimate(K):
                 playerRating= eloModified(playerRating, minutesPlayed, Team1, Team2, float(row1[5]), float(row1[6]), plusminus1, plusminus2,K)
         i = i + 1
     csv_file1.close()
+    print("ESTIMATED WITH THESIS")
     print("Number of correct predicitons:" ,noOfPredictions,"Total number of games:", match, "Prediction Rate", noOfPredictions / match)
-    print("ESTIMATED")
     return playerRating,minutesPlayedEstimate
 
 def store(playerRating,TrueStrength):

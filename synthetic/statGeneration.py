@@ -27,6 +27,15 @@ def generateTrueStrength():
     print("TRUE STRENGTH GENERATED")
     return playerRatingTrue,minutesPlayedTrue
 
+def generateTrueTeamStrength():
+    teamRatingTrue = defaultdict(dict)
+    for i in range(1, 17):
+        Team = "T" + str(i)
+        seed = np.random.beta(1.5, 5)
+        teamRatingTrue[Team] = round((seed * 600) + 900)
+    print("TRUE Team STRENGTH GENERATED")
+    return teamRatingTrue
+
 
 def statsGenerate(playerRatingTrue,minutesPlayedTrue,matches):
     csv_file1 = open('MatchupGenerate.csv', 'w')

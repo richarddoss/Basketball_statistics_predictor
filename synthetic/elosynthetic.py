@@ -52,5 +52,6 @@ def estimate1(K):
             j=j+1
         else:
             j=1
+    print("ESTIMATED WITH CONVENTIONAL")
     print("Correct Predicitons",accuracy,"Total Number of games",j-1)
     return teams_rating
