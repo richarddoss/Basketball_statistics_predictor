@@ -20,8 +20,8 @@ for j in range(10):
     print("Iteration",j)
     s.statsGenerate(playerRatingTrue,minutesPlayedTrue,1000)
     for i in range(N):
-        playerRating,minutesPlayedEstimate=e.estimate(K1[i])
-        teamRating2 = e1.estimate1(K2[i])
+        playerRating,minutesPlayedEstimate,a1=e.estimate(K1[i])
+        teamRating2,a2 = e1.estimate1(K2[i])
         teamRatingTrue=e.playerToTeamRating(playerRatingTrue,minutesPlayedTrue,minutesPlayedTrue)
         teamRating1 = e.playerToTeamRating1(playerRating, minutesPlayedEstimate, minutesPlayedTrue)
         MSE1[i][j]=e.MeanSquareError(teamRating1,teamRatingTrue)
