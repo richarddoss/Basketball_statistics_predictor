@@ -174,7 +174,7 @@ def estimate(K):
     csv_file1.close()
     print("ESTIMATED WITH THESIS")
     print("Number of correct predicitons:" ,noOfPredictions,"Total number of games:", match, "Prediction Rate", noOfPredictions / match)
-    return playerRating,minutesPlayedEstimate
+    return playerRating,minutesPlayedEstimate,noOfPredictions
 
 def store(playerRating,TrueStrength):
     csv_file3= open("cross.csv",'w')

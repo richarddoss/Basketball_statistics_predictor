@@ -48,7 +48,7 @@ for row in reader:
                 s2=1
             if (s1==1 and teams_rating[Team1]>(teams_rating[Team2]+100)) or(s2==1 and (100+teams_rating[Team2])>teams_rating[Team1]):
                 accuracy+=1
-            teams_rating[Team1],teams_rating[Team2]=elo(teams_rating[Team1],teams_rating[Team2],5,s1,s2,Team1,Team2)
+            teams_rating[Team1],teams_rating[Team2]=elo(teams_rating[Team1],teams_rating[Team2],20,s1,s2,Team1,Team2)
             print(Team1,"rating",teams_rating[Team1],Team2,"rating",teams_rating[Team2])
             #time.sleep(2)
             j=j+1
