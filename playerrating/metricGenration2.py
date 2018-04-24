@@ -14,7 +14,7 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
     m2 = 0
     NumOfPlayer = 0
     Sum = 0
-    K = 1000
+    K = 150
     Offset = defaultdict(dict)
     for players in minutesPlayed[Team1]:
         #print("Minutes Played",minutesPlayed[Team1][players],players)
@@ -199,19 +199,19 @@ for row1 in reader1:
             match = match + 1
             print(Team1, row1[3], Team2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
             playerRating= elo(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2)
-            '''
             m1 = 0
             m2 = 0
             p1=0
             p2=0
             for players in minutesPlayed[Team1]:
-                m1 += playerRating[players] * minutesPlayed[Team1][players]
+                m1 += playerRating[players] * minutesPlayedEstimate[players]
                 p1+=playerRating[players]
             for players in minutesPlayed[Team2]:
-                m2 += playerRating[players] * minutesPlayed[Team2][players]
+                m2 += playerRating[players] * minutesPlayedEstimate[players]
                 p2+=playerRating[players]
             TeamRating[Team1] = m1
             TeamRating[Team2] = m2
+            '''
             print("%%%%%%%%%%%% after update%%%%%%%%%%%%%%%")
             #print("Updated rating for {}".format(Team1), round(p1))
             #print("updated rating for {}".format(Team2), round(p2))
@@ -237,11 +237,8 @@ for row1 in reader1:
             #print('Total number of players',TotalPlayer)
             '''
             if match == 1230:
-                #print(sorted(TeamRating.values()))
-                #print(TeamRating)
-                sumTeam=0
                 for Teeam in TeamRating:
-                    sumTeam = sumTeam + TeamRating[Teeam]
+                    print(Teeam,TeamRating[Teeam])
     i = i + 1
 
 SUM=sum(avg)    # computing the constant value
