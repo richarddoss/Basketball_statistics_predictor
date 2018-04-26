@@ -11,8 +11,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="totTeamstats.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../screenScraping/totTeamstats.py">
+      <file leaf-file-name="DBP_PDPv.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/HBA/chao/DBP_PDPv.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -21,77 +21,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metricGeneration.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../metricGeneration.py">
+      <file leaf-file-name="DBP_v5.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/HBA/chao/DBP_v5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1728">
-              <caret line="100" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accEval.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../synthetic/accEval.py">
+      <file leaf-file-name="NN.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/HBA/chao/NN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+            <state relative-caret-position="345">
+              <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="elosynthetic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../synthetic/elosynthetic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="brackets.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../brackets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="63" column="25" lean-forward="false" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PerfEval.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PerfEval.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../synthetic/PerfEval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metricGenration2.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../playerrating/metricGenration2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="209" column="67" lean-forward="false" selection-start-line="209" selection-start-column="67" selection-end-line="209" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="eloTrails.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../screenScraping/eloTrails.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="133" />
+            <state relative-caret-position="161">
+              <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -119,8 +75,9 @@
         <option value="$PROJECT_DIR$/../brackets,py" />
         <option value="$PROJECT_DIR$/../screenScraping/eloTrails.py" />
         <option value="$PROJECT_DIR$/../brackets.py" />
-        <option value="$PROJECT_DIR$/../synthetic/PerfEval.py" />
         <option value="$PROJECT_DIR$/../playerrating/metricGenration2.py" />
+        <option value="$USER_HOME$/HBA/chao/NN.py" />
+        <option value="$PROJECT_DIR$/../synthetic/PerfEval.py" />
       </list>
     </option>
   </component>
@@ -152,7 +109,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,6 +120,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -236,37 +193,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../screenScraping/totTeamstats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../metricGeneration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="100" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../synthetic/elosynthetic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../synthetic/accEval.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
           <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -274,9 +204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
           <caret line="63" column="25" lean-forward="false" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -284,7 +211,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1710">
           <caret line="101" column="29" lean-forward="false" selection-start-line="95" selection-start-column="8" selection-end-line="101" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -292,7 +218,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
           <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="133" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -300,9 +225,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -310,7 +232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -318,7 +239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1728">
           <caret line="100" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -326,9 +246,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
           <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -336,7 +253,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -344,7 +260,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1710">
           <caret line="101" column="29" lean-forward="false" selection-start-line="95" selection-start-column="8" selection-end-line="101" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -352,7 +267,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
           <caret line="48" column="12" lean-forward="true" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="133" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -360,9 +274,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="846">
           <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -370,7 +281,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -378,7 +288,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1728">
           <caret line="100" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -386,7 +295,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -394,9 +302,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
           <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -404,7 +309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1710">
           <caret line="101" column="29" lean-forward="false" selection-start-line="95" selection-start-column="8" selection-end-line="101" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -412,7 +316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
           <caret line="48" column="12" lean-forward="true" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="133" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -420,9 +323,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1062">
           <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -556,9 +456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
           <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -573,7 +470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -588,7 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1728">
           <caret line="100" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -597,15 +492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../screenScraping/eloTrails.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="133" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -613,19 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
           <caret line="63" column="25" lean-forward="false" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../synthetic/PerfEval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -633,6 +506,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="209" column="67" lean-forward="false" selection-start-line="209" selection-start-column="67" selection-end-line="209" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../screenScraping/eloTrails.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/HBA/chao/DBP_v5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/HBA/chao/DBP_PDPv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/HBA/chao/NN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../synthetic/PerfEval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
           <folding />
         </state>
       </provider>
