@@ -196,7 +196,13 @@ def MeanSquareError(playerRating,TrueStrength):
     #print(sum,number)
     time.sleep(5)
     return(MSE)
-
+def dictToInt(playerStrength):
+    player=np.zeros(160)
+    k=0
+    for p in playerStrength:
+        player[k]=playerStrength[p]
+        k+=1
+    return(player)
 def playerToTeamRating(players,time,timeTrue):
     teamRating=defaultdict(dict)
     for i in range(1,17):

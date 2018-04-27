@@ -10,6 +10,7 @@ import statGeneration as s
 import estimation as e
 import elosynthetic as e1
 import panda as p
+from sklearn.metrics import mean_squared_error
 playerRatingTrue,minutesPlayedTrue=s.generateTrueStrength()
 #time.sleep(20)
 K1=[1,5,10,20,100,200,500,750,1000,1200]
@@ -30,9 +31,14 @@ for j in range(10):
         print("4")
         teamRating1 = e.playerToTeamRating1(playerRating, minutesPlayedEstimate, minutesPlayedTrue)
         print("5")
-        MSE1[i][j]=e.MeanSquareError(teamRating1,teamRatingTrue)
+        x1=e.dictToInt(teamRating1)
+        x2=e.dictToInt(teamRatingTrue)
+        MSE1[i][j]=mean_squared_error(x1,x2)
+        #MSE1[i][j]=e.MeanSquareError(teamRating1,teamRatingTrue)
         print("6")
-        MSE2[i][j] = e.MeanSquareError(teamRating2, teamRatingTrue)
+        x1 = e.dictToInt(teamRating2)
+        MSE2[i][j] = mean_squared_error(x1, x2)
+        #MSE2[i][j] = e.MeanSquareError(teamRating2, teamRatingTrue)
         print("7")
         print("K1 value",K1[i],"MSE",MSE1[i][j])
         print("K2 value", K2[i], "MSE", MSE2[i][j])
