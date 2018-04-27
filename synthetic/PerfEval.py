@@ -9,6 +9,7 @@ import random
 import statGeneration as s
 import estimation as e
 import elosynthetic as e1
+import panda as p
 playerRatingTrue,minutesPlayedTrue=s.generateTrueStrength()
 #time.sleep(20)
 K1=[1,5,10,20,100,200,500,750,1000,1200]
@@ -21,14 +22,18 @@ for j in range(10):
     s.statsGenerate(playerRatingTrue,minutesPlayedTrue,1000)
     for i in range(N):
         print("1")
-        playerRating,minutesPlayedEstimate,a1=e.estimate(K1[i])
+        playerRating,minutesPlayedEstimate,a1=p.estimate(K1[i])
         print("2")
         teamRating2,a2 = e1.estimate1(K2[i])
         print("3")
         teamRatingTrue=e.playerToTeamRating(playerRatingTrue,minutesPlayedTrue,minutesPlayedTrue)
+        print("4")
         teamRating1 = e.playerToTeamRating1(playerRating, minutesPlayedEstimate, minutesPlayedTrue)
+        print("5")
         MSE1[i][j]=e.MeanSquareError(teamRating1,teamRatingTrue)
+        print("6")
         MSE2[i][j] = e.MeanSquareError(teamRating2, teamRatingTrue)
+        print("7")
         print("K1 value",K1[i],"MSE",MSE1[i][j])
         print("K2 value", K2[i], "MSE", MSE2[i][j])
 

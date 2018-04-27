@@ -34,7 +34,7 @@
       <file leaf-file-name="NN.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/HBA/chao/NN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="1602">
               <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -43,12 +43,60 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PerfEval.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PerfEval.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../synthetic/PerfEval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+            <state relative-caret-position="629">
+              <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="estimation.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../synthetic/estimation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="194" column="17" lean-forward="true" selection-start-line="194" selection-start-column="17" selection-end-line="194" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="panda.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../synthetic/panda.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="593">
+              <caret line="109" column="24" lean-forward="false" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statGeneration.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../synthetic/statGeneration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testpanda.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../synthetic/testpanda.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,13 +118,15 @@
         <option value="$USER_HOME$/github/ECEN765/project1/linearRegression.py" />
         <option value="$USER_HOME$/HBA/regression.py" />
         <option value="$PROJECT_DIR$/../synthetic/elosynthetic.py" />
-        <option value="$PROJECT_DIR$/../synthetic/estimation.py" />
         <option value="$PROJECT_DIR$/../synthetic/accEval.py" />
         <option value="$PROJECT_DIR$/../brackets,py" />
         <option value="$PROJECT_DIR$/../screenScraping/eloTrails.py" />
         <option value="$PROJECT_DIR$/../brackets.py" />
         <option value="$PROJECT_DIR$/../playerrating/metricGenration2.py" />
         <option value="$USER_HOME$/HBA/chao/NN.py" />
+        <option value="$PROJECT_DIR$/../synthetic/estimation.py" />
+        <option value="$PROJECT_DIR$/../synthetic/testpanda.py" />
+        <option value="$PROJECT_DIR$/../synthetic/panda.py" />
         <option value="$PROJECT_DIR$/../synthetic/PerfEval.py" />
       </list>
     </option>
@@ -108,7 +158,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,13 +169,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../synthetic/PerfEval.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../synthetic/statGeneration.py" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -189,31 +239,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../synthetic/accEval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../brackets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="63" column="25" lean-forward="false" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../playerrating/metricGenration2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="101" column="29" lean-forward="false" selection-start-line="95" selection-start-column="8" selection-end-line="101" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../screenScraping/eloTrails.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
@@ -438,13 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../synthetic/estimation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="58" column="12" lean-forward="false" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gaussian.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -534,7 +558,7 @@
     </entry>
     <entry file="file://$USER_HOME$/HBA/chao/NN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="1602">
           <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -542,11 +566,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../synthetic/statGeneration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../synthetic/testpanda.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../synthetic/panda.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="109" column="24" lean-forward="false" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../synthetic/PerfEval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="629">
+          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../synthetic/estimation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="194" column="17" lean-forward="true" selection-start-line="194" selection-start-column="17" selection-end-line="194" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

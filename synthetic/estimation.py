@@ -87,6 +87,7 @@ def estimate(K):
     avg=[]
     number=0
     flag=0
+    print("entered first file")
     for row1 in reader1:
         plusminus1 = defaultdict(dict)
         plusminus2 = defaultdict(dict)
@@ -110,6 +111,7 @@ def estimate(K):
                     plusminus2[fixedPlayer]=0
                 #print("opening player stats")
                 csv_file2 = open('playerstats.csv', 'r')
+                print("opened second file")
                 reader2 = csv.reader(csv_file2)
                 for row2 in reader2:
                     if j > 0:
