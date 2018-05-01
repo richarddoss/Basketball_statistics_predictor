@@ -771,3 +771,39 @@ A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
 1517068249486	Marionette	INFO	Enabled via --marionette
 1517068251854	Marionette	INFO	Listening on port 41572
 1517068251924	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525129827807	geckodriver	INFO	geckodriver 0.20.1
+1525129827815	geckodriver	INFO	Listening on 127.0.0.1:51306
+1525129828826	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.2cKQ8yxGhgVu"
+1525129829438	Marionette	INFO	Enabled via --marionette
+1525129830956	Marionette	INFO	Listening on port 39374
+1525129831064	Marionette	WARN	TLS certificate errors will be ignored for this session
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+1525131378017	geckodriver	INFO	geckodriver 0.20.1
+1525131378025	geckodriver	INFO	Listening on 127.0.0.1:43275
+1525131379041	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.FZa6mPttOUYJ"
+1525131379644	Marionette	INFO	Enabled via --marionette
+1525131381102	Marionette	INFO	Listening on port 39814
+1525131381174	Marionette	WARN	TLS certificate errors will be ignored for this session
+ExceptionHandler::GenerateDump cloned child 5879
+ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 677: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "CrashService waiting for content crash ping to be sent"
+[Parent 3719, Gecko_IOThread] WARNING: pipe error (62): Connection reset by peer: file /build/firefox-BgGWsI/firefox-59.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Parent 3719, Gecko_IOThread] WARNING: pipe error: Broken pipe: file /build/firefox-BgGWsI/firefox-59.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 709
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1525182431438	geckodriver	INFO	geckodriver 0.20.1
+1525182431446	geckodriver	INFO	Listening on 127.0.0.1:46948
+1525182432453	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.N5TSe5jBKdIs"
+1525182433160	Marionette	INFO	Enabled via --marionette
+1525182434570	Marionette	INFO	Listening on port 43218
+1525182434672	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x510027,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+

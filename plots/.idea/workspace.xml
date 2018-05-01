@@ -11,39 +11,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DBP_PDPv.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/HBA/chao/DBP_PDPv.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBP_v5.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/HBA/chao/DBP_v5.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NN.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/HBA/chao/NN.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1602">
-              <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PerfEval.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PerfEval.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../synthetic/PerfEval.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="647">
@@ -55,10 +23,42 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="matchupsGeneration.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../playerrating/matchupsGeneration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playerGeneration.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../playerrating/playerGeneration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="metricGenration2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../playerrating/metricGenration2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="647">
+              <caret line="276" column="25" lean-forward="false" selection-start-line="276" selection-start-column="25" selection-end-line="276" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="estimation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../synthetic/estimation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
+            <state relative-caret-position="3564">
               <caret line="204" column="17" lean-forward="false" selection-start-line="204" selection-start-column="17" selection-end-line="204" selection-end-column="17" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -70,7 +70,7 @@
       <file leaf-file-name="panda.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../synthetic/panda.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
+            <state relative-caret-position="1872">
               <caret line="109" column="24" lean-forward="false" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -93,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/../synthetic/testpanda.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="17" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -122,12 +122,14 @@
         <option value="$PROJECT_DIR$/../brackets,py" />
         <option value="$PROJECT_DIR$/../screenScraping/eloTrails.py" />
         <option value="$PROJECT_DIR$/../brackets.py" />
-        <option value="$PROJECT_DIR$/../playerrating/metricGenration2.py" />
         <option value="$USER_HOME$/HBA/chao/NN.py" />
         <option value="$PROJECT_DIR$/../synthetic/testpanda.py" />
         <option value="$PROJECT_DIR$/../synthetic/panda.py" />
         <option value="$PROJECT_DIR$/../synthetic/estimation.py" />
         <option value="$PROJECT_DIR$/../synthetic/PerfEval.py" />
+        <option value="$PROJECT_DIR$/../playerrating/matchupsGeneration.py" />
+        <option value="$PROJECT_DIR$/../playerrating/metricGenration2.py" />
+        <option value="$PROJECT_DIR$/../playerrating/playerGeneration.py" />
       </list>
     </option>
   </component>
@@ -176,7 +178,7 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../synthetic/statGeneration.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../playerrating/metricGenration2.py" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -245,20 +247,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../screenScraping/eloTrails.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../synthetic/PerfEval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../screenScraping/totTeamstats.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -526,13 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../playerrating/metricGenration2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="209" column="67" lean-forward="false" selection-start-line="209" selection-start-column="67" selection-end-line="209" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../screenScraping/eloTrails.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="737">
@@ -561,7 +542,7 @@
         <state relative-caret-position="1602">
           <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -577,7 +558,7 @@
     <entry file="file://$PROJECT_DIR$/../synthetic/testpanda.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="17" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -586,7 +567,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../synthetic/panda.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
+        <state relative-caret-position="1872">
           <caret line="109" column="24" lean-forward="false" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -596,7 +577,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../synthetic/estimation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
+        <state relative-caret-position="3564">
           <caret line="204" column="17" lean-forward="false" selection-start-line="204" selection-start-column="17" selection-end-line="204" selection-end-column="17" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
@@ -611,6 +592,32 @@
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../playerrating/matchupsGeneration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../playerrating/metricGenration2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="276" column="25" lean-forward="false" selection-start-line="276" selection-start-column="25" selection-end-line="276" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../playerrating/playerGeneration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

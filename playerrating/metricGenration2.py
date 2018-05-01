@@ -89,6 +89,11 @@ match = 0
 avg=[]
 number=0
 flag=0
+Dray=[]
+James=[]
+Bruno=[]
+Curry=[]
+Jordan=[]
 for row1 in reader1:
     plusminus1 = defaultdict(dict)
     plusminus2 = defaultdict(dict)
@@ -199,6 +204,18 @@ for row1 in reader1:
             match = match + 1
             print(Team1, row1[3], Team2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
             playerRating= elo(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2)
+            if Team1=="GSW" or Team2=="GSW":
+                #print(playerRating["Draymond GreenGSW"])
+                Dray.append(playerRating["Draymond GreenGSW"])
+                Curry.append(playerRating["Stephen CurryGSW"])
+            if Team1=="CLE" or Team2=="CLE":
+                James.append(playerRating["LeBron JamesCLE"])
+            if Team1=="TOR" or Team2=="TOR":
+                if playerRating["Bruno CabocloTOR"]!={}:
+                    Bruno.append(playerRating["Bruno CabocloTOR"])
+            if Team1=="LAC" or Team2=="LAC":
+                if playerRating["DeAndre JordanLAC"]!={}:
+                    Jordan.append(playerRating["DeAndre JordanLAC"])
             m1 = 0
             m2 = 0
             p1=0
@@ -244,5 +261,21 @@ for row1 in reader1:
 SUM=sum(avg)    # computing the constant value
 #print("average",SUM/number)
 csv_file1.close()
+#print(Dray)
+print(Bruno)
+Dray=np.array(Dray)
+James=np.array(James)
+Bruno=np.array(Bruno)
+Curry=np.array(Curry)
+Jordan=np.array(Jordan)
+plt.plot(Dray,label="Draymond Green")
+plt.plot(James,label="LeBron James")
+plt.plot(Bruno,label="Bruno Caboclo")
+plt.plot(Curry,label="Steph Curry")
+plt.plot(Jordan,label="DeAndre Jordan")
+plt.xlabel("Game number")
+plt.ylabel("Player Rating")
+plt.legend()
+plt.show()
 
 
