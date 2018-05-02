@@ -7,12 +7,16 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 import function as f
-
-
+from mpl_toolkits import mplot3d
+import pickle
 K=[50,150,500,1000]
-N=[500,1000,2500,5000,7500]
+N=[500,1000,2500,5000,7500,10000]
+no=0
+P=np.zeros(24)
+K1=np.zeros(24)
+N1=np.zeros(24)
 for k in range(4):
-    for n in range(5):
+    for n in range(6):
         csv_file1 = open('TeamMatchups.csv', 'r')
         reader1 = csv.reader(csv_file1)
         i = 0
@@ -144,6 +148,10 @@ for k in range(4):
                     match = match + 1
                     if match==1230:
                         print(K[k], N[n], noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
+                        P[no]=noOfPredictions
+                        K1[no]=K[k]
+                        N1[no]=N[n]
+                        no+=1
                     playerRating= f.elo(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2,K[k],N[n])
                     m1 = 0
                     m2 = 0
@@ -163,3 +171,19 @@ for k in range(4):
         #print("average",SUM/number)
         csv_file1.close()
         #print(Dray)
+fig = plt.figure()
+pickle_out = open("K1","wb")
+pickle.dump(K1,pickle_out)
+pickle_out.close()
+pickle_out = open("N1","wb")
+pickle.dump(N1,pickle_out)
+pickle_out.close()
+pickle_out = open("P","wb")
+pickle.dump(P,pickle_out)
+pickle_out.close()
+ax = plt.axes(projection='3d')
+#ax.plot3D(K1, N1, P, 'gray')
+ax.contour3D(K1, N1, P, 50, cmap='green')
+ax.set_xlabel('gamma value')
+ax.set_ylabel('eta value')
+ax.set_zlabel('Number of correct predictions')

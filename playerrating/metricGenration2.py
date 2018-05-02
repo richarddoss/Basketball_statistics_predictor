@@ -5,69 +5,9 @@ import re
 import csv
 import matplotlib.pyplot as plt
 import numpy as np
+import function as f
 
-def logistic(x):
-    y = (1 / (1 + pow(10, -(x) / 40)))-0.5
-    return (y)
-def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus2):
-    m1 = 0
-    m2 = 0
-    NumOfPlayer = 0
-    Sum = 0
-    K = 150
-    Offset = defaultdict(dict)
-    for players in minutesPlayed[Team1]:
-        #print("Minutes Played",minutesPlayed[Team1][players],players)
-        m1 += playerRating[players] * minutesPlayed[Team1][players]
-    for players in minutesPlayed[Team2]:
-        #print("Minutes Played111", minutesPlayed[Team2][players], players)
-        m2 += playerRating[players] * minutesPlayed[Team2][players]
-    w1=0
-    w2=0
-    for fixedPlayer in minutesPlayed[Team1]:
-        new = TotTime - minutesPlayed[Team1][fixedPlayer]*TotTime
-        m1without = ((m1 - playerRating[fixedPlayer] * minutesPlayed[Team1][fixedPlayer]) * TotTime) / new
-        minPlayedByPlayer = minutesPlayed[Team1][fixedPlayer]  # *int(TotTime)
-        PtTeam = minPlayedByPlayer * playerRating[fixedPlayer] + 4 * minPlayedByPlayer * m1without
-        PtOppTeam = minPlayedByPlayer * 5 * m2
-        X = round(PtTeam - PtOppTeam)
-        X=X*(TotTime/1000)
-        PtDiff=plusminus1[fixedPlayer]-X
-        Offset[fixedPlayer] = K * (round(logistic(PtDiff),2))
-        Sum = Sum + 5*minPlayedByPlayer*Offset[fixedPlayer]
-        NumOfPlayer = NumOfPlayer + 1
-        w1+=(5*minPlayedByPlayer)
-    # calculating offset for Team2
-    for fixedPlayer in minutesPlayed[Team2]:
-        new = TotTime - minutesPlayed[Team2][fixedPlayer]
-        m2without = ((m2 - playerRating[fixedPlayer] * minutesPlayed[Team2][fixedPlayer]) * TotTime) / new
-        minPlayedByPlayer = minutesPlayed[Team2][fixedPlayer]  # *int(TotTime)
-        PtTeam = minPlayedByPlayer * playerRating[fixedPlayer] + 4 * minPlayedByPlayer * m2without
-        PtOppTeam = minPlayedByPlayer * 5 * m1
-        X = round(PtTeam - PtOppTeam)
-        X = X * (TotTime / 1000)
-        PtDiff = plusminus2[fixedPlayer] - X
-        Offset[fixedPlayer] = K * (round(logistic(PtDiff), 2))
-        Sum = Sum + 5*minPlayedByPlayer*Offset[fixedPlayer]
-        NumOfPlayer = NumOfPlayer + 1
-        w2+=(5*minPlayedByPlayer)
-    # Updating the player ratings
-    #print("next phase")
-    sum=0
-    offset=0
-    for fixedPlayer in minutesPlayed[Team1]:
-        Offset[fixedPlayer]=5*minutesPlayed[Team1][fixedPlayer]*(2*Offset[fixedPlayer]-Sum/w1)
-        playerRating[fixedPlayer] = playerRating[fixedPlayer] + Offset[fixedPlayer]
-        offset=Offset[fixedPlayer]+offset
-        sum=sum+playerRating[fixedPlayer]
-    for fixedPlayer in minutesPlayed[Team2]:
-        Offset[fixedPlayer] = 5*minutesPlayed[Team2][fixedPlayer] * (2 * Offset[fixedPlayer] - Sum/w2)
-        playerRating[fixedPlayer] = playerRating[fixedPlayer] + Offset[fixedPlayer]
-        offset = Offset[fixedPlayer] + offset
-        sum=sum+playerRating[fixedPlayer]
-    return playerRating
-
-
+#season 2016-2017
 csv_file1 = open('TeamMatchups.csv', 'r')
 reader1 = csv.reader(csv_file1)
 i = 0
@@ -203,7 +143,7 @@ for row1 in reader1:
                 W = 0
             match = match + 1
             print(Team1, row1[3], Team2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
-            playerRating= elo(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2)
+            playerRating= f.elo(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2)
             if Team1=="GSW" or Team2=="GSW":
                 #print(playerRating["Draymond GreenGSW"])
                 Dray.append(playerRating["Draymond GreenGSW"])
@@ -228,34 +168,6 @@ for row1 in reader1:
                 p2+=playerRating[players]
             TeamRating[Team1] = m1
             TeamRating[Team2] = m2
-            '''
-            print("%%%%%%%%%%%% after update%%%%%%%%%%%%%%%")
-            #print("Updated rating for {}".format(Team1), round(p1))
-            #print("updated rating for {}".format(Team2), round(p2))
-            #print("total2",p1+p2)
-            #time.sleep(2)
-            #print("Match number", match)
-            '''
-            '''
-            sumTeam1 = 0
-            for Teeam in TeamRating:
-                sumTeam1 = sumTeam1 + TeamRating[Teeam]
-                    # print(Teeam,TeamRating[Teeam])
-            print("Total team sum",sumTeam1)
-            sumTeam = 0
-            for Teeam in minutesPlayed:
-                for player in minutesPlayed[Teeam]:
-                    sumTeam = sumTeam + playerRating[player]
-            print("Sum of team rating2", sumTeam)
-            TotalPlayer=0
-            for Team in minutesPlayed:
-                for player in minutesPlayed[Team]:
-                    TotalPlayer+=1
-            #print('Total number of players',TotalPlayer)
-            '''
-            if match == 1230:
-                for Teeam in TeamRating:
-                    print(Teeam,TeamRating[Teeam])
     i = i + 1
 
 SUM=sum(avg)    # computing the constant value
