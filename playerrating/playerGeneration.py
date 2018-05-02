@@ -6,14 +6,14 @@ import collections
 import time
 import csv
 driver= webdriver.Firefox()
-driver.get('http://stats.nba.com/search/player-game/#?Season=2017-18&SeasonType=Regular%20Season&sort=GAME_DATE&dir=-1&DateFrom=01%2F01%2F2018&DateTo=01%2F31%2F2018')
+driver.get('http://stats.nba.com/search/player-game/#?Season=2017-18&SeasonType=Regular%20Season&sort=GAME_DATE&dir=-1&DateFrom=02%2F01%2F2018&DateTo=04%2F11%2F2018')
 time.sleep(10)
 crossBtn=driver.find_element_by_xpath('/html/body/div[3]/div[2]/section/div/div[2]/div/div[1]/div/div/table/tbody/tr/td[4]/button')
 crossBtn.click()
 runBtn=driver.find_element_by_xpath('/html/body/div[3]/div[2]/section/div/div[2]/div/div[2]/stats-run-it/button')
 runBtn.click()
 time.sleep(30)
-totalGames = "4572"
+totalGames = "9925"
 print(totalGames)
 numberClicks=int(int(totalGames)/50)
 if int(totalGames)%50==0:

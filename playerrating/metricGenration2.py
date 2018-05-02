@@ -31,7 +31,7 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
         PtTeam = minPlayedByPlayer * playerRating[fixedPlayer] + 4 * minPlayedByPlayer * m1without
         PtOppTeam = minPlayedByPlayer * 5 * m2
         X = round(PtTeam - PtOppTeam)
-        X=X*(TotTime/2500)
+        X=X*(TotTime/1000)
         PtDiff=plusminus1[fixedPlayer]-X
         Offset[fixedPlayer] = K * (round(logistic(PtDiff),2))
         Sum = Sum + 5*minPlayedByPlayer*Offset[fixedPlayer]
@@ -45,7 +45,7 @@ def elo(playerRating, minutesPlayed, Team1, Team2, TotTime, plusminus1,plusminus
         PtTeam = minPlayedByPlayer * playerRating[fixedPlayer] + 4 * minPlayedByPlayer * m2without
         PtOppTeam = minPlayedByPlayer * 5 * m1
         X = round(PtTeam - PtOppTeam)
-        X = X * (TotTime / 2500)
+        X = X * (TotTime / 1000)
         PtDiff = plusminus2[fixedPlayer] - X
         Offset[fixedPlayer] = K * (round(logistic(PtDiff), 2))
         Sum = Sum + 5*minPlayedByPlayer*Offset[fixedPlayer]
@@ -276,6 +276,6 @@ plt.plot(Jordan,label="DeAndre Jordan")
 plt.xlabel("Game number")
 plt.ylabel("Player Rating")
 plt.legend()
-plt.show()
+#plt.show()
 
 

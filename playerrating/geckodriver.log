@@ -807,3 +807,15 @@ A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
 
 ###!!! [Child][MessageChannel] Error: (msgtype=0x510027,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
 
+1525219214225	geckodriver	INFO	geckodriver 0.20.1
+1525219214236	geckodriver	INFO	Listening on 127.0.0.1:45239
+1525219215234	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.AbR79fkyDwGL"
+1525219215880	Marionette	INFO	Enabled via --marionette
+1525219217430	Marionette	INFO	Listening on port 40355
+1525219217466	Marionette	WARN	TLS certificate errors will be ignored for this session
+ExceptionHandler::GenerateDump cloned child 5048
+ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 677: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "CrashService waiting for content crash ping to be sent"
+[Parent 2753, Gecko_IOThread] WARNING: pipe error (62): Connection reset by peer: file /build/firefox-BgGWsI/firefox-59.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
