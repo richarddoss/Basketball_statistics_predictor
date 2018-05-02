@@ -87,8 +87,10 @@ for row in reader:
                 s2=1
             if (s1==1 and teams_rating[Team1]>(teams_rating[Team2]+100)) or(s2==1 and (100+teams_rating[Team2])>teams_rating[Team1]):
                 accuracy+=1
-                acc=accuracy/j
-                PRED[j] = round(acc, 2)
+                #time.sleep(2)
+            acc = (accuracy / j) * 100
+            PRED[j] = round(acc, 2)
+            print("PRED", PRED[j])
             teams_rating[Team1],teams_rating[Team2]=elo(teams_rating[Team1],teams_rating[Team2],20,s1,s2,Team1,Team2)
             print(Team1,"rating",teams_rating[Team1],Team2,"rating",teams_rating[Team2])
             #time.sleep(2)
@@ -97,7 +99,9 @@ for row in reader:
         j=1
 
 print(accuracy,j-1,accuracy/(j-1))
-plt.plot(PRED,color='r')
+print(PRED)
+plt.plot(PRED[1:1231],color='r')
 plt.xlabel("MATCH NUMBER")
 plt.ylabel("PREDICTION RATE")
+plt.title("NBA 2017-18 season")
 plt.show()

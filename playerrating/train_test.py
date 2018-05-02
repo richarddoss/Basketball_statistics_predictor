@@ -286,7 +286,7 @@ for row1 in reader1:
             else:
                 W = 0
             match = match + 1
-            acc=noOfPredictions/match
+            acc=(noOfPredictions/match)*100
             print(Team1, row1[3], Team2, noOfPredictions, match,"Prediction Rate",acc)
             PRED[match]=round(acc,2)
             playerRating= f.elo(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2,500,10000)
