@@ -12,7 +12,7 @@ import pickle
 K=[50,150,500,1000]
 N=[500,1000,2500,5000,7500,10000]
 no=0
-P=np.zeros(24)
+P=np.zeros((4,6))
 K1=np.zeros(24)
 N1=np.zeros(24)
 for k in range(4):
@@ -148,7 +148,7 @@ for k in range(4):
                     match = match + 1
                     if match==1230:
                         print(K[k], N[n], noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
-                        P[no]=noOfPredictions
+                        P[k][n]=(noOfPredictions/match)*100
                         K1[no]=K[k]
                         N1[no]=N[n]
                         no+=1
@@ -173,17 +173,17 @@ for k in range(4):
         #print(Dray)
 fig = plt.figure()
 pickle_out = open("K1","wb")
-pickle.dump(K1,pickle_out)
+pickle.dump(K,pickle_out)
 pickle_out.close()
 pickle_out = open("N1","wb")
-pickle.dump(N1,pickle_out)
+pickle.dump(N,pickle_out)
 pickle_out.close()
 pickle_out = open("P","wb")
 pickle.dump(P,pickle_out)
 pickle_out.close()
-ax = plt.axes(projection='3d')
+#ax = plt.axes(projection='3d')
 #ax.plot3D(K1, N1, P, 'gray')
-ax.contour3D(K1, N1, P, 50, cmap='green')
-ax.set_xlabel('gamma value')
-ax.set_ylabel('eta value')
-ax.set_zlabel('Number of correct predictions')
+#ax.contour3D(K1, N1, P, 50, cmap='green')
+#ax.set_xlabel('gamma value')
+#ax.set_ylabel('eta value')
+#ax.set_zlabel('Number of correct predictions')

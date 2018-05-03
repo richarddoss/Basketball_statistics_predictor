@@ -21,9 +21,9 @@ if int(totalGames)%50==0:
 for i in range(0,numberClicks):
         LoadMoreBtn = driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div[4]/nba-stat-table/div[2]/div/a')
         LoadMoreBtn.click()
-csv_file = open('PlayerDetails2017-2018.csv', 'a')
+csv_file = open('PlayerDetails2015-2016.csv', 'w')
 writer = csv.writer(csv_file)
-#writer.writerow(['PLAYER','TEAM', 'DATE', 'MATCHUP', 'W/L', 'MIN', 'PTS', '+/-'])
+writer.writerow(['PLAYER','TEAM', 'DATE', 'MATCHUP', 'W/L', 'MIN', 'PTS', '+/-'])
 for row in range(1,int(totalGames)+1):
 	teams_dict = collections.OrderedDict()
 	teams_dict['PLAYER']=driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div[4]/nba-stat-table/div[1]/div[1]/table/tbody/tr['+str(row)+']/td[1]/a').text
