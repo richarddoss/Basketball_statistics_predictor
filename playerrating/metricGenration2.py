@@ -143,7 +143,7 @@ for row1 in reader1:
                 W = 0
             match = match + 1
             print(Team1, row1[3], Team2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
-            playerRating= f.elo(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2)
+            playerRating= f.elo(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2, 500, 10000)
             if Team1=="GSW" or Team2=="GSW":
                 #print(playerRating["Draymond GreenGSW"])
                 Dray.append(playerRating["Draymond GreenGSW"])
@@ -174,7 +174,7 @@ SUM=sum(avg)    # computing the constant value
 #print("average",SUM/number)
 csv_file1.close()
 #print(Dray)
-print(Bruno)
+#print(Bruno)
 Dray=np.array(Dray)
 James=np.array(James)
 Bruno=np.array(Bruno)
@@ -187,8 +187,8 @@ plt.plot(James,label="LeBron James")
 #plt.plot(Jordan,label="DeAndre Jordan")
 plt.xlabel("Game number")
 plt.ylabel("Player Rating")
-plt.title("Player performance comparison")
+plt.title("Rating comparison of LeBron James and Draymond Green")
 plt.legend()
-#plt.show()
+plt.show()
 
 
