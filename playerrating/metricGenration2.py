@@ -34,6 +34,7 @@ James=[]
 Bruno=[]
 Curry=[]
 Jordan=[]
+CLE=[]
 for row1 in reader1:
     plusminus1 = defaultdict(dict)
     plusminus2 = defaultdict(dict)
@@ -142,12 +143,16 @@ for row1 in reader1:
             else:
                 W = 0
             match = match + 1
-            print(Team1, row1[3], Team2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
+            print(Team1, m1, row1[3], Team2, m2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
             playerRating= f.elo(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2, 500, 10000)
-            if Team1=="GSW" or Team2=="GSW":
+            if Team1=="UTA" or Team2=="UTA":
                 #print(playerRating["Draymond GreenGSW"])
-                Dray.append(playerRating["Draymond GreenGSW"])
-                Curry.append(playerRating["Stephen CurryGSW"])
+                #Dray.append(playerRating["Draymond GreenGSW"])
+                if playerRating["Gordon HaywardUTA"]!={}:
+                    print("Gordon Hayward", playerRating["Gordon HaywardUTA"])
+                    Curry.append(playerRating["Gordon HaywardUTA"])
+                else:
+                    Curry.append(0)
             if Team1=="CLE" or Team2=="CLE":
                 James.append(playerRating["LeBron JamesCLE"])
             if Team1=="TOR" or Team2=="TOR":
@@ -166,6 +171,12 @@ for row1 in reader1:
             for players in minutesPlayed[Team2]:
                 m2 += playerRating[players] * minutesPlayedEstimate[players]
                 p2+=playerRating[players]
+            if Team1=="UTA":
+                CLE.append(m1)
+                print("UTA",m1)
+            elif Team2=="UTA":
+                CLE.append(m2)
+                print("UTA",m2)
             TeamRating[Team1] = m1
             TeamRating[Team2] = m2
     i = i + 1
@@ -180,11 +191,13 @@ James=np.array(James)
 Bruno=np.array(Bruno)
 Curry=np.array(Curry)
 Jordan=np.array(Jordan)
-plt.plot(Dray,label="Draymond Green")
-plt.plot(James,label="LeBron James")
+CLE=np.array(CLE)
+#plt.plot(Dray,label="Draymond Green")
+#plt.plot(James,label="LeBron James")
 #plt.plot(Bruno,label="Bruno Caboclo")
-#plt.plot(Curry,label="Steph Curry")
+plt.plot(Curry,label="Steph Curry")
 #plt.plot(Jordan,label="DeAndre Jordan")
+plt.plot(CLE,label="CLE")
 plt.xlabel("Game number")
 plt.ylabel("Player Rating")
 plt.title("Rating comparison of LeBron James and Draymond Green")
