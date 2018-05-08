@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import function as f
 import sklearn.metrics as m
-
+import pickle
 gamma=[150,500,1000]
 eta=[2500,5000,10000]
 def P(r1,r2):
@@ -325,6 +325,7 @@ HomeAdv = defaultdict(dict)
 checklist = []
 flag=0
 match=0
+PRED=[]
 for row1 in reader1:
     plusminus1 = defaultdict(dict)
     plusminus2 = defaultdict(dict)
@@ -428,6 +429,7 @@ for row1 in reader1:
             match = match + 1
             #print(Team1, m1, row1[3], Team2, m2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
             playerRating= f.eloModified(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2, 500, 10000)
+            PRED.append(round(noOfPredictions/match,2))
             m1 = 0
             m2 = 0
             p1=0
@@ -443,3 +445,6 @@ for row1 in reader1:
             TeamRating[Team2] = m2
     i = i + 1
 print("gamma value",500,"eta value ",10000,f.logLoss(y_true,y_pred),noOfPredictions)
+pickle_out = open("PRED2","wb")
+pickle.dump(PRED,pickle_out)
+pickle_out.close()

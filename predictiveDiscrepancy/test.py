@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import function as f
 import sklearn.metrics as m
-
+import pickle
 K=[1,2,5,10,20,30,50,100,200,500]
 def P(r1,r2):
     R1 = pow(10, r1 / 400)
@@ -122,6 +122,7 @@ y_pred=[]
 y_true=[]
 csv_file1 = open('TeamMatchups2017-18.csv', 'r')
 reader1 = csv.reader(csv_file1)
+PRED=[]
 for row in reader1:
     if j != 0:
         s = re.split('\W+', row[2])
@@ -145,9 +146,13 @@ for row in reader1:
             p=P(r1,r2)
             y_pred.append(p)
             teams_rating[Team1], teams_rating[Team2] = f.elo(teams_rating[Team1], teams_rating[Team2], 30, s1, s2, Team1, Team2)
+            PRED.append(round(accuracy/j,2))
             #print(Team1, "rating", teams_rating[Team1], Team2, "rating", teams_rating[Team2])
             #time.sleep(2)
             j = j + 1
     else:
         j = 1
 print("K value",30,"Log loss",f.logLoss(y_true,y_pred),"accuracy",accuracy)
+pickle_out = open("PRED1","wb")
+pickle.dump(PRED,pickle_out)
+pickle_out.close()
