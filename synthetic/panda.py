@@ -2,10 +2,10 @@ import pandas
 import numpy as np
 from collections import defaultdict
 import re
-
+from sklearn.metrics import mean_squared_error
 import estimation as e
 
-def estimate(K):
+def estimate(K, minutesPlayedTrue,playerRatingTrue):
     #csv_file1 = open('MatchupGenerate.csv', 'r')
     df1=pandas.read_csv('MatchupGenerate.csv')
     df2=pandas.read_csv('playerstats.csv')
@@ -23,10 +23,17 @@ def estimate(K):
     TeamRating = defaultdict(dict)
     HomeAdv = defaultdict(dict)
     TrueStrength= defaultdict(dict)
+    teamRating=defaultdict(dict)
     match = 0
     avg=[]
     number=0
     flag=0
+    MSE=[]
+    for i in range(1,17):
+        Team="T"+str(i)
+        teamRating[Team]=0
+        teamRating[Team]=1000
+
     print("entered first file")
     for i in range(totalGames):
         plusminus1 = defaultdict(dict)
@@ -108,6 +115,19 @@ def estimate(K):
         match = match + 1
         #print(Team1, row1[2], Team2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
         playerRating= e.eloModified(playerRating, minutesPlayed, Team1, Team2, float(row1[i][5]), float(row1[i][6]), plusminus1, plusminus2,K)
+        m1 = 0
+        m2 = 0
+        for players in minutesPlayed[Team1]:
+            m1 += playerRating[players] * minutesPlayedEstimate[players]
+        for players in minutesPlayed[Team2]:
+            m2 += playerRating[players] * minutesPlayedEstimate[players]
+        teamRating[Team1]=m1
+        teamRating[Team2]=m2
+        #teamRating1 = e.playerToTeamRating1(playerRating, minutesPlayedEstimate, minutesPlayedTrue)
+        teamRatingTrue = e.playerToTeamRating(playerRatingTrue, minutesPlayedTrue, minutesPlayedTrue)
+        x1 = e.dictToInt(teamRating)
+        x2 = e.dictToInt(teamRatingTrue)
+        MSE.append(mean_squared_error(x1, x2))
     print("ESTIMATED WITH THESIS")
     print("Number of correct predicitons:" ,noOfPredictions,"Total number of games:", match, "Prediction Rate", noOfPredictions / match)
-    return playerRating,minutesPlayedEstimate,noOfPredictions
+    return playerRating,minutesPlayedEstimate,noOfPredictions,MSE
