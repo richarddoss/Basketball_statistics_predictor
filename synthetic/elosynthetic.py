@@ -10,12 +10,6 @@ def elo(r1,r2,k,s1,s2,Team1,Team2):
     #R2=10^(r2/400)
     E1=R1/(R1+R2)
     E2=R2/(R1+R2)
-   # print(Team1,"has ",int(E1*100),"%to win")
-    #print(Team2,"has",int(E2*100),"%to win")
-    #if s1==1:
-    #    print(Team1 , "won")
-   # else:
-    #    print(Team2,"won")
     r1_cap=r1+k*(s1-E1)
     r2_cap=r2+k*(s2-E2)
     return r1_cap,r2_cap
@@ -27,10 +21,12 @@ def estimate1(K):
     flag=0
     Teams=collections.OrderedDict()
     for i in range(0,16):
+        #print(i)
         Teams[i]="T"+str(i+1)
     teams_rating = collections.OrderedDict()
     accuracy=0
     for i in range(0,16):
+        #print(i)
         teams_rating[Teams[i]]=1000
     for row in reader:
         if j!=0:
@@ -52,6 +48,8 @@ def estimate1(K):
             j=j+1
         else:
             j=1
-    print("ESTIMATED WITH CONVENTIONAL")
-    print("Correct Predicitons",accuracy,"Total Number of games",j-1)
+    #print("ESTIMATED WITH CONVENTIONAL")
+    #print("Correct Predicitons",accuracy,"Total Number of games",j-1)
+    #print(teams_rating)
+    #time.sleep(2)
     return teams_rating,accuracy
