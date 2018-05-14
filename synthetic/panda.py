@@ -5,7 +5,7 @@ import re
 from sklearn.metrics import mean_squared_error
 import estimation as e
 
-def estimate(K, minutesPlayedTrue,playerRatingTrue):
+def estimate(gamma, eta):
     #csv_file1 = open('MatchupGenerate.csv', 'r')
     df1=pandas.read_csv('MatchupGenerate.csv')
     df2=pandas.read_csv('playerstats.csv')
@@ -34,7 +34,7 @@ def estimate(K, minutesPlayedTrue,playerRatingTrue):
         teamRating[Team]=0
         teamRating[Team]=1000
 
-    print("entered first file")
+    #print("entered first file")
     for i in range(totalGames):
         plusminus1 = defaultdict(dict)
         plusminus2 = defaultdict(dict)
@@ -114,7 +114,7 @@ def estimate(K, minutesPlayedTrue,playerRatingTrue):
             W = 0
         match = match + 1
         #print(Team1, row1[2], Team2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
-        playerRating= e.eloModified(playerRating, minutesPlayed, Team1, Team2, float(row1[i][5]), float(row1[i][6]), plusminus1, plusminus2,K)
+        playerRating= e.eloModified(playerRating, minutesPlayed, Team1, Team2, float(row1[i][5]), float(row1[i][6]), plusminus1, plusminus2,gamma,eta)
         m1 = 0
         m2 = 0
         for players in minutesPlayed[Team1]:
@@ -124,10 +124,10 @@ def estimate(K, minutesPlayedTrue,playerRatingTrue):
         teamRating[Team1]=m1
         teamRating[Team2]=m2
         #teamRating1 = e.playerToTeamRating1(playerRating, minutesPlayedEstimate, minutesPlayedTrue)
-        teamRatingTrue = e.playerToTeamRating(playerRatingTrue, minutesPlayedTrue, minutesPlayedTrue)
-        x1 = e.dictToInt(teamRating)
-        x2 = e.dictToInt(teamRatingTrue)
-        MSE.append(mean_squared_error(x1, x2))
-    print("ESTIMATED WITH THESIS")
-    print("Number of correct predicitons:" ,noOfPredictions,"Total number of games:", match, "Prediction Rate", noOfPredictions / match)
-    return playerRating,minutesPlayedEstimate,noOfPredictions,MSE
+        #teamRatingTrue = e.playerToTeamRating(playerRatingTrue, minutesPlayedTrue, minutesPlayedTrue)
+        #x1 = e.dictToInt(teamRating)
+        #x2 = e.dictToInt(teamRatingTrue)
+        #MSE.append(mean_squared_error(x1, x2))
+    #print("ESTIMATED WITH THESIS")
+    #print("Number of correct predicitons:" ,noOfPredictions,"Total number of games:", match, "Prediction Rate", noOfPredictions / match)
+    return playerRating,minutesPlayedEstimate

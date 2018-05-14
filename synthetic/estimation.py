@@ -11,7 +11,7 @@ def logistic(x):
     y = (1 / (1 + pow(10, -(x) / 40)))-0.5
     return (y)
 
-def eloModified(playerRating, minutesPlayed, Team1, Team2, TotTime1, TotTime2, plusminus1,plusminus2,K):
+def eloModified(playerRating, minutesPlayed, Team1, Team2, TotTime1, TotTime2, plusminus1,plusminus2,K,eta):
     m1 = 0
     m2 = 0
     NumOfPlayer = 0
@@ -33,7 +33,7 @@ def eloModified(playerRating, minutesPlayed, Team1, Team2, TotTime1, TotTime2, p
         PtTeam = minPlayedByPlayer * playerRating[fixedPlayer] + 4 * minPlayedByPlayer * m1without
         PtOppTeam = minPlayedByPlayer * 5 * m2
         X = round(PtTeam - PtOppTeam)
-        X=X*(TotTime1/2500)
+        X=X*(TotTime1/eta)
         PtDiff=plusminus1[fixedPlayer]-X
         Offset[fixedPlayer] = K * (round(logistic(PtDiff),2))
         Sum = Sum + 5*minPlayedByPlayer*Offset[fixedPlayer]
