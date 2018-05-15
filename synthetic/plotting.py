@@ -6,15 +6,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 from mpl_toolkits import mplot3d
 import pickle
-gamma=[100, 250, 500]
-eta=[1000,2500,10000]
+gamma=[50, 100, 250, 500]
+eta=[1000,2500,5000, 10000]
 f = open("MSE",'rb')
 MSE=pickle.load(f)
-MSE1=np.zeros(9)
-for i in range(9):
+MSE1=np.zeros(16)
+for i in range(16):
     MSE1[i]=np.mean(MSE[i][:])
 print(MSE1)
-MSE1=np.reshape(np.transpose(MSE1),[3,3])
+MSE1=np.reshape(np.transpose(MSE1),[4,4])
 MSE1=np.transpose(MSE1)
 print(np.shape(gamma),np.shape(eta),np.shape(MSE1))
 X,Y=np.meshgrid(gamma,eta)

@@ -64,7 +64,7 @@ def statsGenerate(playerRatingTrue,minutesPlayedTrue,matches):
         TotalTime2=0
         for fixedPlayer in playerRatingTrue[Team1]:
             playerRating[Team1][fixedPlayer]=np.random.normal(playerRatingTrue[Team1][fixedPlayer],100)
-            minutesPlayed[Team1][fixedPlayer]=np.random.normal(minutesPlayedTrue[Team1][fixedPlayer],12)
+            minutesPlayed[Team1][fixedPlayer]=np.random.beta(11.02,11.02)*48
             TotalTime1+=minutesPlayed[Team1][fixedPlayer]
         #print("TotalTime 1",TotalTime1)
         for fixedPlayer in playerRatingTrue[Team2]:
