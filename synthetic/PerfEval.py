@@ -18,9 +18,9 @@ K1=[0,1,5,10,20,100,200,500,750,1000,1200]
 K2=[0,1,2,5,10,20,50]
 eta1=[1000,2500,500,10000]
 gamma1=[50,100,250,500]
-gamma=[50,50,50,50, 100,100,100,100,250,250,250,250,500,500,500,500]
-eta=[1000,2500, 5000, 10000,1000,2500,5000, 10000,1000,2500,5000, 10000, 1000,2500,5000, 10000]
-N=16
+gamma=[25,25,25,25,50,50,50,50,75,75,75,75, 100,100,100,100,250,250,250,250,500,500,500,500]
+eta=[1000,2500, 5000, 10000,1000,2500,5000, 10000,1000,2500,5000, 10000, 1000,2500,5000, 10000,1000,2500, 5000, 10000,1000,2500, 5000, 10000]
+N=24
 MSE1=np.zeros((N,100))
 MSE2=np.zeros((N,100))
 for j in range(100):
@@ -61,9 +61,12 @@ pickle_out.close()
 pickle_out = open("eta","wb")
 pickle.dump(eta1,pickle_out)
 pickle_out.close()
+#for i in range(N):
+#    MSE2final[i] = np.mean(MSE2[i])
 pickle_out = open("MSE","wb")
 pickle.dump(MSE2,pickle_out)
 pickle_out.close()
+'''
 #MSE1final=np.zeros(N)
 MSE2final=np.zeros(N)
 csv_file1 = open('MSEvaluesThesis.csv', 'w')
@@ -98,3 +101,4 @@ ax.set_ylabel('eta value')
 plt.title("synthetic data")
 plt.legend()
 plt.show()
+'''

@@ -5,7 +5,7 @@ import re
 from sklearn.metrics import mean_squared_error
 import estimation as e
 
-def estimate(gamma, eta):
+def estimate(gamma, eta,minutesPlayedTrue,playerRatingTrue):
     #csv_file1 = open('MatchupGenerate.csv', 'r')
     df1=pandas.read_csv('MatchupGenerate.csv')
     df2=pandas.read_csv('playerstats.csv')
@@ -123,11 +123,11 @@ def estimate(gamma, eta):
             m2 += playerRating[players] * minutesPlayedEstimate[players]
         teamRating[Team1]=m1
         teamRating[Team2]=m2
-        #teamRating1 = e.playerToTeamRating1(playerRating, minutesPlayedEstimate, minutesPlayedTrue)
-        #teamRatingTrue = e.playerToTeamRating(playerRatingTrue, minutesPlayedTrue, minutesPlayedTrue)
-        #x1 = e.dictToInt(teamRating)
-        #x2 = e.dictToInt(teamRatingTrue)
-        #MSE.append(mean_squared_error(x1, x2))
+        #teamRating = e.playerToTeamRating1(playerRating, minutesPlayedEstimate, minutesPlayedTrue)
+        teamRatingTrue = e.playerToTeamRating(playerRatingTrue, minutesPlayedTrue, minutesPlayedTrue)
+        x1 = e.dictToInt(teamRating)
+        x2 = e.dictToInt(teamRatingTrue)
+        MSE.append(mean_squared_error(x1, x2))
     #print("ESTIMATED WITH THESIS")
     #print("Number of correct predicitons:" ,noOfPredictions,"Total number of games:", match, "Prediction Rate", noOfPredictions / match)
-    return playerRating,minutesPlayedEstimate
+    return playerRating,minutesPlayedEstimate,MSE
