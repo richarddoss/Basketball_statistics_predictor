@@ -145,7 +145,7 @@ for row in reader1:
             y_true.append(s1)
             p=P(r1,r2)
             y_pred.append(p)
-            teams_rating[Team1], teams_rating[Team2] = f.elo(teams_rating[Team1], teams_rating[Team2], 30, s1, s2, Team1, Team2)
+            teams_rating[Team1], teams_rating[Team2] = f.elo(teams_rating[Team1], teams_rating[Team2], 100, s1, s2, Team1, Team2)
             PRED.append(round(accuracy/j,2))
             #print(Team1, "rating", teams_rating[Team1], Team2, "rating", teams_rating[Team2])
             #time.sleep(2)
@@ -153,6 +153,6 @@ for row in reader1:
     else:
         j = 1
 print("K value",30,"Log loss",f.logLoss(y_true,y_pred),"accuracy",accuracy)
-pickle_out = open("PRED1","wb")
+pickle_out = open("PREDK3","wb")
 pickle.dump(PRED,pickle_out)
 pickle_out.close()

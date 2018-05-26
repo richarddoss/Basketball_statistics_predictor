@@ -4,6 +4,8 @@ import numpy as np
 import collections
 import time
 import statGeneration
+import estimation as e
+from sklearn.metrics import mean_squared_error
 def elo(r1,r2,k,s1,s2,Team1,Team2):
     R1=pow(10,r1/400)
     R2=pow(10,r2/400)
@@ -14,9 +16,10 @@ def elo(r1,r2,k,s1,s2,Team1,Team2):
     r2_cap=r2+k*(s2-E2)
     return r1_cap,r2_cap
 
-def estimate1(K):
+def estimate1(K,teamRatingTrue):
     dataFile=open('MatchupGenerate.csv','r')
     reader=csv.reader(dataFile)
+    MSE=[]
     j=0
     flag=0
     Teams=collections.OrderedDict()
@@ -43,6 +46,9 @@ def estimate1(K):
             if (s1==1 and teams_rating[Team1]>(teams_rating[Team2])) or(s2==1 and (teams_rating[Team2])>teams_rating[Team1]):
                 accuracy+=1
             teams_rating[Team1],teams_rating[Team2]=elo(teams_rating[Team1],teams_rating[Team2],K,s1,s2,Team1,Team2)
+            x1 = e.dictToInt(teams_rating)
+            x2 = e.dictToInt(teamRatingTrue)
+            MSE.append(mean_squared_error(x1, x2))
             #print(Team1,"rating",teams_rating[Team1],Team2,"rating",teams_rating[Team2])
             #time.sleep(2)
             j=j+1
@@ -52,4 +58,4 @@ def estimate1(K):
     #print("Correct Predicitons",accuracy,"Total Number of games",j-1)
     #print(teams_rating)
     #time.sleep(2)
-    return teams_rating,accuracy
+    return teams_rating,accuracy,MSE
