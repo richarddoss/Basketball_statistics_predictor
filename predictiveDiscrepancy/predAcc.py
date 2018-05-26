@@ -15,7 +15,7 @@ gamma=[10,250,500,1000]
 plt.plot(gamma, MSE2500, label='eta value=2500')
 #plt.plot(gamma, MSE5000, label='eta value=5000')
 plt.plot(gamma, MSE10000, label='eta value=10000')
-plt.plot(gamma, MSE25000, label='eta value=50000')
+plt.plot(gamma, MSE25000, label='eta value=25000')
 plt.plot(gamma, MSE100000, label='eta value=100000')
 plt.xlabel("gamma values")
 plt.ylabel("Mean Square Error")

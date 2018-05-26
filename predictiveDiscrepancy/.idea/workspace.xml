@@ -65,7 +65,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
@@ -75,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="predAcc.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="predAcc.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/predAcc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="306">
+              <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -90,7 +90,7 @@
       <file leaf-file-name="test_thesis.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_thesis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
+            <state relative-caret-position="1259">
               <caret line="446" column="43" lean-forward="false" selection-start-line="446" selection-start-column="43" selection-end-line="446" selection-end-column="67" />
               <folding />
             </state>
@@ -110,8 +110,8 @@
       <file leaf-file-name="plotting.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../synthetic/plotting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="49" selection-end-column="10" />
+            <state relative-caret-position="539">
+              <caret line="43" column="43" lean-forward="true" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -147,9 +147,9 @@
         <option value="$PROJECT_DIR$/../synthetic/PerfEvalElo.py" />
         <option value="$PROJECT_DIR$/../synthetic/panda.py" />
         <option value="$PROJECT_DIR$/../synthetic/convTest.py" />
-        <option value="$PROJECT_DIR$/predAcc.py" />
         <option value="$PROJECT_DIR$/test_thesis.py" />
         <option value="$PROJECT_DIR$/train_validateThesis.py" />
+        <option value="$PROJECT_DIR$/predAcc.py" />
       </list>
     </option>
   </component>
@@ -647,23 +647,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../synthetic/plotting.py">
+    <entry file="file://$PROJECT_DIR$/train_validateThesis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="49" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/predAcc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="665">
+          <caret line="327" column="82" lean-forward="false" selection-start-line="327" selection-start-column="82" selection-end-line="327" selection-end-column="82" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -677,17 +665,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_thesis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
+        <state relative-caret-position="1259">
           <caret line="446" column="43" lean-forward="false" selection-start-line="446" selection-start-column="43" selection-end-line="446" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train_validateThesis.py">
+    <entry file="file://$PROJECT_DIR$/../synthetic/plotting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="327" column="82" lean-forward="false" selection-start-line="327" selection-start-column="82" selection-end-line="327" selection-end-column="82" />
-          <folding />
+        <state relative-caret-position="539">
+          <caret line="43" column="43" lean-forward="true" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -696,6 +686,16 @@
         <state relative-caret-position="144">
           <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/predAcc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
