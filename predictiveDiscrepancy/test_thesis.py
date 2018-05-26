@@ -8,8 +8,8 @@ import numpy as np
 import function as f
 import sklearn.metrics as m
 import pickle
-gamma=[150,500,1000]
-eta=[2500,5000,10000]
+gamma=250
+eta=25000
 def P(r1,r2):
     R1 = pow(10, r1 / 400)
     R2 = pow(10, r2 / 400)
@@ -17,8 +17,8 @@ def P(r1,r2):
     return(E1,1-E1)
 
 #### TRAINING PHASSE
-print("gamma value",500)
-print("eta value",10000)
+print("gamma value",gamma)
+print("eta value",eta)
 print("TRAINING PHASE")
 print("RUNNING OVER 2015-16")
 csv_file1 = open('TeamMatchups2015-16.csv', 'r')
@@ -139,7 +139,7 @@ for row1 in reader1:
                 W = 0
             match = match + 1
             #print(Team1, m1, row1[3], Team2, m2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
-            playerRating= f.eloModified(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2, 500, 10000)
+            playerRating= f.eloModified(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2, gamma, eta)
             m1 = 0
             m2 = 0
             p1=0
@@ -265,7 +265,7 @@ for row1 in reader1:
             if match<=615:
                 match = match + 1
                 #print(Team1, m1, row1[3], Team2, m2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
-                playerRating= f.eloModified(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2, 500, 10000)
+                playerRating= f.eloModified(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2, gamma, eta)
                 m1 = 0
                 m2 = 0
                 p1=0
@@ -293,7 +293,7 @@ for row1 in reader1:
                 y_pred.append(P(m1,m2))
                 match = match + 1
                 #print(Team1, m1, row1[3], Team2, m2, noOfPredictions, match-615,"Prediction Rate",noOfPredictions/(match-615))
-                playerRating= f.eloModified(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2, 500, 10000)
+                playerRating= f.eloModified(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2, gamma, eta)
                 m1 = 0
                 m2 = 0
                 p1=0
@@ -309,10 +309,10 @@ for row1 in reader1:
                 TeamRating[Team2] = m2
 
     i = i + 1
-print("gamma value",500,"eta value ",10000,f.logLoss(y_true,y_pred),noOfPredictions)
+print("gamma value",gamma,"eta value ",eta,f.logLoss(y_true,y_pred),noOfPredictions)
 print("TESTING PHASE")
-print("gamma value",500)
-print("eta value",10000)
+print("gamma value",gamma)
+print("eta value",eta)
 print("RUNNING OVER 2017-18")
 csv_file1 = open('TeamMatchups2017-18.csv', 'r')
 reader1 = csv.reader(csv_file1)
@@ -428,7 +428,7 @@ for row1 in reader1:
             y_pred.append(P(m1, m2))
             match = match + 1
             #print(Team1, m1, row1[3], Team2, m2, noOfPredictions, match,"Prediction Rate",noOfPredictions/match)
-            playerRating= f.eloModified(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2, 500, 10000)
+            playerRating= f.eloModified(playerRating, minutesPlayed, Team1, Team2, int(row1[4]), plusminus1, plusminus2, gamma, eta)
             PRED.append(round(noOfPredictions/match,2))
             m1 = 0
             m2 = 0
@@ -444,7 +444,7 @@ for row1 in reader1:
             TeamRating[Team1] = m1
             TeamRating[Team2] = m2
     i = i + 1
-print("gamma value",500,"eta value ",10000,f.logLoss(y_true,y_pred),noOfPredictions)
+print("gamma value",gamma,"eta value ",eta,f.logLoss(y_true,y_pred),noOfPredictions)
 pickle_out = open("PRED2","wb")
 pickle.dump(PRED,pickle_out)
 pickle_out.close()

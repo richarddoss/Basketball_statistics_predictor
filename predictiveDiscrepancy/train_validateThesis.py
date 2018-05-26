@@ -8,15 +8,15 @@ import numpy as np
 import function as f
 import sklearn.metrics as m
 
-gamma=[150,500,1000]
-eta=[2500,5000,10000]
+gamma=[100,250,500,1000]
+eta=[2500,10000,25000,100000]
 def P(r1,r2):
     R1 = pow(10, r1 / 400)
     R2 = pow(10, r2 / 400)
     E1 = R1 / (R1 + R2)
     return(E1,1-E1)
-for g in range(3):
-    for e in range(3):
+for g in range(4):
+    for e in range(4):
         #### TRAINING PHASSE
         print("gamma value",gamma[g])
         print("eta value",eta[e])
