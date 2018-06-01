@@ -18,8 +18,9 @@ def generateTrueStrength():
         for j in range(1, 11):
             player = "P" + str(j) + Team
             seed = np.random.beta(1.5, 5)
+            seed1 = np.random.beta(11,11)
             playerRatingTrue[Team][player] = round((seed * 600) + 900)
-            minutesPlayedTrue[Team][player] = round(seed * 24 + 12)
+            minutesPlayedTrue[Team][player] = round(seed * 48)
             TotalTime[Team]+=minutesPlayedTrue[Team][player]
         for k in range(1,11):
             player = "P" + str(k) + Team

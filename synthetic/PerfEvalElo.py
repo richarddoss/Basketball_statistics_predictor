@@ -17,9 +17,9 @@ playerRatingTrue,minutesPlayedTrue=s.generateTrueStrength()
 K1=[0,1,5,10,20,100,200,500,750,1000,1200]
 K2=[0,1,2,5,10,20,50]
 N=7
-MSE1=np.zeros((N,1000))
-MSE2=np.zeros((N,1000))
-for j in range(1000):
+MSE1=np.zeros((N,100))
+MSE2=np.zeros((N,100))
+for j in range(100):
     print("Iteration",j)
     s.statsGenerate(playerRatingTrue,minutesPlayedTrue,1000)
     for i in range(N):
