@@ -5,6 +5,7 @@ import collections
 import time
 #from elo import rate_1vs1
 import matplotlib.pyplot as plt
+
 def elo(r1,r2,k,s1,s2,Team1,Team2):
     R1=pow(10,r1/400)
     R2=pow(10,r2/400)
@@ -20,6 +21,7 @@ def elo(r1,r2,k,s1,s2,Team1,Team2):
     r1_cap=r1+k*(s1-E1)
     r2_cap=r2+k*(s2-E2)
     return r1_cap,r2_cap
+
 def func1():
     dataFile=open('TeamMatchups.csv','r')
     reader=csv.reader(dataFile)
