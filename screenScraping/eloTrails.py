@@ -41,7 +41,7 @@ for row in reader:
             print("Match", j)
             Team1=s[0]
             Team2=s[1]
-            if row[3]=='W':
+            if row[3]=='W': 
                 s1=1
                 s2=0
             else:

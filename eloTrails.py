@@ -23,9 +23,9 @@ def elo(r1,r2,k,s1,s2,Team1,Team2):
 
 dataFile=open('screenScraping/RegularSeasonteamstats.csv','r')
 csvFile=open('screenScraping/syntheticDataMatchup.csv','w')
-writer=csv.writer(csvFile)
+#writer=csv.writer(csvFile)
 reader=csv.reader(dataFile)
-writer.writerow(['Team1','Team2'])
+#writer.writerow(['Team1','Team2'])
 j=0
 Teams=['ATL','BOS','BKN','CHA','CHI','CLE','DAL','DEL','DEN','DET','EST','FCB','GSW','HOU','IND','LAC','LAL','MAC','MEM','MIA','MIL','MIN','NOP','NYK','OKC','ORL','PHI','PHX','POR','RMD','SAC','SAS','SDS','SLA','TOR','USA','UTA','WAS','WLD','WST']
 #prior=[1000,1010,1020,1030,1040,1050,'D,'DEL','DEN','DET','EST','FCB','GSW','HOU','IND','LAC','LAL','MAC','MEM','MIA','MIL','MIN','NOP','NYK','OKC','ORL','PHI','PHX','POR','RMD','SAC','SAS','SDS','SLA','TOR','USA','UTA','WAS','WLD','WST']
@@ -75,7 +75,7 @@ for row in reader:
             k=k+1
             teams_rating[Team1],teams_rating[Team2]=elo(teams_rating[Team1],teams_rating[Team2],20,s1,s2,Team1,Team2)
             r = [Team1, Team2]
-            writer.writerow(r)
+           # writer.writerow(r)
             #print("chec")
             #print(check)
             print(Team1,"rating",teams_rating[Team1],Team2,"rating",teams_rating[Team2])
