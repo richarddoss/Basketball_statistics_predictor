@@ -1,6 +1,6 @@
 # Research
 
-Welcome to graduate thesis. In this thesis, I designed a Elo-rating system that quantifies the strength of basketball players.The contents of this projects can be divided as follows:
+Welcome to my graduate thesis. In this thesis,a Elo based rating system is proposed that quantifies the strength of the basketball players.The contents of this projects can be divided as follows:
 1) Datasets
     - Synthetic Datasets
     - Real world dataset(NBA season 2015-2017)
